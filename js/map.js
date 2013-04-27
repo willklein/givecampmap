@@ -69,8 +69,8 @@ var map;
 		$(places).each(function(i, place) {
 			latlong = place.coordinates.split(',');
 			L.marker([
-				parseInt(latlong[1], 10),
-				parseInt(latlong[0], 10)
+				parseFloat(latlong[1], 10),
+				parseFloat(latlong[0], 10)
 			], {
 				icon: icons[place.category],
 				title: place.name
