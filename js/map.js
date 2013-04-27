@@ -50,23 +50,8 @@ var map;
         };
     };
 
-    var renderPopup = (function() {
-        var templateSrc = $('#mapPopup').text();
-        var template = Handlebars.compile(templateSrc);
-
-        return function(data) {
-            return template(data);
-        };
-    })();
-
-    var renderLegendLabel = (function() {
-        var templateSrc = $('#legendLabel').text();
-        var template = Handlebars.compile(templateSrc);
-
-        return function(data) {
-            return template(data);
-        };
-    })();
+    var renderPopup = renderFor('#mapPopup');
+    var renderLegendLabel = renderFor('#legendLabel');
 
 	function processData(data) {
 		$(data.categories).each(function(i, category) {
@@ -92,15 +77,17 @@ var map;
 	function createUI() {
 		var $map = $('#map'),
 			$legend = $('<div id="legend">'),
+            labels = [],
 			latlong,
 			layerGroups = {};
 
 		$(categories).each(function(i, category) {
 //			$legend.append($('<label data-id="' + category.id + '"><img src="' + category.icon + '" />' + category.title + '</label>'));
-            $legend.append(renderLegendLabel(category));
+            labels.push(renderLegendLabel(category));
 			layerGroups[category.id] = [];
 		});
         
+        $legend.append(labels.join());
 		$map.after($legend);
 
 		$(places).each(function(i, place) {
