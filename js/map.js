@@ -6,39 +6,40 @@ var map;
         zoom: 14,
         minZoom: 14
     };
-    
+
     map = new L.Map('map', options);
-    
+
     var baseMaps = [
         'OpenStreetMap.Mapnik'
     ];
-    
+
     var overlayMaps = [
 //        'OpenWeatherMap.Clouds'
     ];
-    
+
 //    L.TileLayer(baseMaps).addTo(map);
-    
+
     var layerControl = L.control.layers.provided(baseMaps).addTo(map);
-    
+
     layerControl.removeFrom(map);
-    
+
     //you can still add your own after with
     //layerControl.addBaseLayer(layer,name);
-    
+
     //L.control.layers(baseMaps, overlayMaps).addTo(map);
-    
+
 //    var marker = L.marker([42.356324, -71.075578]).addTo(map);
-    
+
 //    marker.bindPopup('<b>Hello world!</b><br>I am a popup.').openPopup();
 })();
-
 
 (function($) {
 
 	var icons = {},
+		layers = {},
 		categories = [],
-		places = [];
+		places = [],
+		mapLayers = {};
 
 	function processData(data) {
 		$(data.categories).each(function(i, category) {
@@ -64,24 +65,32 @@ var map;
 	function createUI() {
 		var $map = $('#map'),
 			$legend = $('<div id="legend">'),
-			latlong;
+			latlong,
+			layerGroups = {};
 
 		$(categories).each(function(i, category) {
 			$legend.append($('<label data-id="' + category.id + '"><img src="' + category.icon + '" />' + category.title + '</label>'));
+			layerGroups[category.id] = [];
 		});
 		$map.after($legend);
 
 		$(places).each(function(i, place) {
 			latlong = place.coordinates.split(',');
-			L.marker([
-				parseFloat(latlong[1], 10),
-				parseFloat(latlong[0], 10)
-			], {
-				icon: icons[place.category],
-				title: place.name
-			}).addTo(map);
+			layerGroups[place.category].push(
+				L.marker([
+					parseFloat(latlong[1], 10),
+					parseFloat(latlong[0], 10)
+				], {
+					icon: icons[place.category],
+					title: place.name
+				})
+			);
 		});
 
+		$(categories).each(function(i, category) {
+			mapLayers[category.id] = L.layerGroup(layerGroups[category.id]);
+			map.addLayer(mapLayers[category.id]);
+		});
 	}
 
 	function init() {
@@ -93,14 +102,18 @@ var map;
 			}
 		});
 
-		$('document').on('click', '.label', function(e) {
+		$(document).on('click', 'label', function(e) {
 			var $el = $(this);
-			if (el.hasClass('disabled')) {
+			var id = $el.data('id');
+
+			if ($el.hasClass('disabled')) {
 				// toggle map markers on
+				map.addLayer(mapLayers[id]);
 			} else {
 				// toggle map markers off
+				map.removeLayer(mapLayers[id]);
 			}
-			el.toggleClass('disabled');
+			$el.toggleClass('disabled');
 		});
 	}
 
