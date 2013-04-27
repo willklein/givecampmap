@@ -40,6 +40,33 @@ var map;
 		categories = [],
 		places = [],
 		mapLayers = {};
+    
+    var renderFor = function(selector) {
+        var templateSrc = $(selector).text();
+        var template = Handlebars.compile(templateSrc);
+
+        return function(data) {
+            return template(data);
+        };
+    };
+
+    var renderPopup = (function() {
+        var templateSrc = $('#mapPopup').text();
+        var template = Handlebars.compile(templateSrc);
+
+        return function(data) {
+            return template(data);
+        };
+    })();
+
+    var renderLegendLabel = (function() {
+        var templateSrc = $('#legendLabel').text();
+        var template = Handlebars.compile(templateSrc);
+
+        return function(data) {
+            return template(data);
+        };
+    })();
 
 	function processData(data) {
 		$(data.categories).each(function(i, category) {
@@ -61,16 +88,6 @@ var map;
 			places.push(place);
 		});
 	}
-    
-    var renderPopup = (function() {
-        var templateSrc = $('#mapPopup').text();
-        
-        var template = Handlebars.compile(templateSrc);
-        
-        return function(data) {
-            return template(data);  
-        };
-    })();
 
 	function createUI() {
 		var $map = $('#map'),
@@ -79,9 +96,11 @@ var map;
 			layerGroups = {};
 
 		$(categories).each(function(i, category) {
-			$legend.append($('<label data-id="' + category.id + '"><img src="' + category.icon + '" />' + category.title + '</label>'));
+//			$legend.append($('<label data-id="' + category.id + '"><img src="' + category.icon + '" />' + category.title + '</label>'));
+            $legend.append(renderLegendLabel(category));
 			layerGroups[category.id] = [];
 		});
+        
 		$map.after($legend);
 
 		$(places).each(function(i, place) {
