@@ -1,18 +1,11 @@
+var map;
 
 (function() {
     var options = {
         center: new L.LatLng(42.357688, -71.073518), zoom: 14
     };
     
-    var map = new L.Map('map', options);
-    //var googleLayer = new L.Google('ROADMAP');
-    //map.addLayer(googleLayer);
-    
-    
-    //var baseMaps = {
-    //        "Stamen.Watercolor",
-    //        "OpenStreetMap.Mapnik": "OpenStreetMap.Mapnik",
-    //    };
+    map = new L.Map('map', options);
     
     var baseMaps = [
             "OpenStreetMap.Mapnik"
