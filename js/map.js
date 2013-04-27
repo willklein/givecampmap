@@ -17,7 +17,12 @@ var map;
 //        'OpenWeatherMap.Clouds'
     ];
     
+//    L.TileLayer(baseMaps).addTo(map);
+    
     var layerControl = L.control.layers.provided(baseMaps).addTo(map);
+    
+    layerControl.removeFrom(map);
+    
     //you can still add your own after with
     //layerControl.addBaseLayer(layer,name);
     
