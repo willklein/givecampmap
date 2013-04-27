@@ -68,7 +68,7 @@ var map;
 			icons[category.id] = L.icon({
 				iconUrl: category.icon,
 //				iconRetinaUrl: 'my-icon@2x.png',
-				iconSize: [32, 32],
+				iconSize: [31, 36],
 				iconAnchor: [16, 16]
 //				popupAnchor: [0, 0],
 //				shadowUrl: 'my-icon-shadow.png',

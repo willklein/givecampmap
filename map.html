@@ -19,7 +19,17 @@
 </div>
 
 <script type="text/template" id="mapPopup">
-    {{{description}}}
+    <div id="popupContent">
+        <div class="popup-img-container">
+            <img src="{{imgSrc}}" />
+        </div>
+
+        <div class="popup-img-container">
+            <div class="close-button">x</div>
+            <h3 class="widget-title">{{name}}</h3>
+            <p>{{{description}}}</p>
+        </div>
+    </div>
 </script>
 
 <script type="text/template" id="legendLabel">

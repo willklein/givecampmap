@@ -3,37 +3,37 @@
         {
           "id": "1",
           "title": "Footbridge",
-          "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/hiker.png"
+            "icon": "img/footbridge.png"
         },
         {
           "id": "2",
           "title": "Playground",
-          "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/pink-pushpin.png"
+            "icon": "img/playground.png"
         },
         {
           "id": "3",
           "title": "Dock",
-          "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/ylw-pushpin.png"
+            "icon": "img/dock.png"
         },
         {
           "id": "4",
           "title": "Memorials & Statues",
-          "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png"
+            "icon": "img/memorials.png"
         },
         {
           "id": "5",
           "title": "Recreation Area",
-          "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/ltblu-pushpin.png"
+            "icon": "img/sports.png"
         },
         {
           "id": "6",
           "title": "Parking",
-          "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/cabs.png"
+            "icon": "img/parking.png"
         },
         {
           "id": "7",
           "title": "Police",
-          "icon": "img/state_police_barracks.png"
+          "icon": "img/police.png"
         }
       ],
       "places": [
@@ -269,11 +269,12 @@
           "lng": -71.085655
         },
         {
-          "name": "LAZ Storrow Drive Parking Lot",
-          "description": "<div dir=\"ltr\">http://www.lazparking.com/parkers</div>",
+          "name": "Storrow Drive Dock",
+          "description": "There are many docks found at various locations throughout the Esplanade including at most of the landings and the lagoon and near Boston University.",
           "category": "7",
           "lat": 42.361683,
-          "lng": -71.071777
+          "lng": -71.071777,
+          "imgSrc": "img/River Dock_JPG.jpg"
         }
       ]
 }

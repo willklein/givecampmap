@@ -31,9 +31,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 290px;
-    padding: 5px 10px;
-    margin-left: 40px;
+    width: 500px;
+    margin: 10px 50px;
+    /*padding: 5px 10px;*/
+    /*margin-left: 40px;*/
     /* Fallback for web browsers that doesn't support RGBa */
     background: rgb(0, 0, 0);
     /* RGBa with 0.7 opacity */
@@ -42,7 +43,47 @@ body {
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-    height: 390px;
+    height: 380px;
     color: #fff;
-    z-index: 1;
+    z-index: 8;
+}
+
+#popupContent {
+    padding: 5px 10px;
+}
+
+#popupContent .close-button {
+    /*float: right;*/
+    display: none;
+}
+
+.popup-img-container,
+.popup-text-container {
+    padding: 10px;
+    height: 300px;
+    float: left;
+    width: 200px;
+}
+
+
+.popup-img-container {
+    overflow-x: hidden;
+}
+
+.popup-text-container{
+    overflow-y: scroll;
+}
+
+#popupContent h3 {
+    margin-top: 0;
+}
+
+#popupContent p {
+    /*padding: 0 10px;*/
+}
+
+.popup-img-container img {
+    /*width: 200px;*/
+    width: auto;
+    height: 100%;
 }
