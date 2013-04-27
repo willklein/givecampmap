@@ -1,6 +1,22 @@
+body {
+	font-family: sans-serif;
+}
 #map {
     clear: both;
     height: 400px;
     width: 1020px;
     margin: 0 auto;
+}
+#legend {
+	margin-top: 1em;
+}
+#legend label {
+	margin-right: 1em;
+}
+#legend label img {
+	height: 1em;
+	margin-right: 0.2em;
+}
+#legend label.disabled {
+	opacity: 0.5;
 }

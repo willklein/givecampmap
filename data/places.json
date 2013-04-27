@@ -1,0 +1,236 @@
+{
+      "categories": [
+        {
+          "id": "1",
+          "title": "Footbridge",
+          "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/hiker.png"
+        },
+        {
+          "id": "2",
+          "title": "Playground",
+          "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/pink-pushpin.png"
+        },
+        {
+          "id": "3",
+          "title": "Dock",
+          "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/ylw-pushpin.png"
+        },
+        {
+          "id": "4",
+          "title": "Memorials & Statues",
+          "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png"
+        },
+        {
+          "id": "5",
+          "title": "Recreation Area",
+          "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/ltblu-pushpin.png"
+        },
+        {
+          "id": "6",
+          "title": "Parking",
+          "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/cabs.png"
+        }
+      ],
+      "places": [
+        {
+          "name": "Blossom Street Footbridge",
+          "description": "Charles St &amp; Blossom St<div>Boston, MA 02114<br><a href=\"http://maps.google.com/maps/place?ftid=0x89e37097656f15a1:0x33d3bb92282f9ea6&amp;q=Charles+St.+%26+Blossom+St.,+Boston,+MA+02114&amp;hl=en&amp;authuser=0&amp;cd=1&amp;cad=src:ppiwlink&amp;ei=9qqqT6qcF5S28gb73bniBA&amp;sig2=oTWAimwt7nXjUglBL6o0fQ&amp;dtab=5\" target=\"_blank\"><img src=\"http://cbk0.google.com/cbk?output=thumbnail&amp;w=90&amp;h=68&amp;ll=42.364304,-71.069742&amp;thumb=0\"></a></div>",
+          "category": "1",
+          "coordinates": "-71.069740,42.364304,0.000000"
+        },
+        {
+          "name": "Charles Street Footbridge",
+          "description": "Embankment Rd &amp; Charles St<div>Boston, MA 02114<br><a href=\"http://maps.google.com/maps/place?ftid=0x89e37098e3b2a101:0x7c377f36d55ecfa3&amp;q=Embankment+Rd.+%26+Charles+St.,+Boston,+MA+02114&amp;hl=en&amp;authuser=0&amp;cd=1&amp;cad=src:ppiwlink&amp;ei=R6uqT8n_LImv8gb8s43PBA&amp;sig2=tMsbgjNTxagWOceBzNotSA&amp;dtab=5\" target=\"_blank\"><img src=\"http://cbk0.google.com/cbk?output=thumbnail&amp;w=90&amp;h=68&amp;ll=42.360747,-71.070886&amp;thumb=0\"></a></div>",
+          "category": "1",
+          "coordinates": "-71.070885,42.360748,0.000000"
+        },
+        {
+          "name": "Arthur Fiedler Footbridge",
+          "description": "<div><font face=\"arial\" size=\"2\">Beacon St &amp; Arlington St</font></div><font face=\"arial\" size=\"2\">Boston, MA 02108</font><br><a href=\"http://maps.google.com/maps/place?ftid=0x89e3709fef4a7759:0x9594c7318de02195&amp;q=Beacon+St.+%26+Arlington+St.,+Boston,+MA+02108&amp;hl=en&amp;authuser=0&amp;cd=1&amp;cad=src:ppiwlink&amp;ei=X6uqT-blH46-8wau6JXMAw&amp;sig2=FYqKJUOSI3kcfte0Ix81jA&amp;dtab=5\" style=\"font-family:arial;font-size:10pt\" target=\"_blank\"><img src=\"http://cbk0.google.com/cbk?output=thumbnail&amp;w=90&amp;h=68&amp;ll=42.355470,-71.072453&amp;thumb=0\"></a>",
+          "category": "1",
+          "coordinates": "-71.072464,42.355434,0.000000"
+        },
+        {
+          "name": "Dartmouth St. Footbridge",
+          "description": "Dartmouth St &amp; Back St<div>Boston, MA 02116<br><a href=\"http://maps.google.com/maps/place?ftid=0x89e37a0a27d24f47:0xda8885e78a16175d&amp;q=Dartmouth+St.+%26+Back+St.,+Boston+MA+02116&amp;hl=en&amp;authuser=0&amp;cd=1&amp;cad=src:ppiwlink&amp;ei=cauqT42rDoiv8gaCyanOBA&amp;sig2=KEHhJk6l57oluIt6NXnMzQ&amp;dtab=5\" target=\"_blank\"><img src=\"http://cbk0.google.com/cbk?output=thumbnail&amp;w=90&amp;h=68&amp;ll=42.354170,-71.079320&amp;thumb=0\"></a></div>",
+          "category": "1",
+          "coordinates": "-71.079323,42.354172,0.000000"
+        },
+        {
+          "name": "Fairfield Street Footbridge",
+          "description": "Back St. &amp; Fairfield St.<div>Boston, MA 02116<br><a href=\"http://maps.google.com/maps/place?ftid=0x89e37a08c057c741:0x435619bb30889004&amp;q=Back+St+%26+Fairfield+St,+Boston,+MA+02116&amp;hl=en&amp;authuser=0&amp;cd=1&amp;cad=src:ppiwlink&amp;ei=hquqT6raFJG68gbQlMWbBQ&amp;sig2=NU0nlVa90cscStl9HUeRWw&amp;dtab=5\" target=\"_blank\"><img src=\"http://cbk0.google.com/cbk?output=thumbnail&amp;w=90&amp;h=68&amp;ll=42.352978,-71.083800&amp;thumb=0\"></a></div>",
+          "category": "1",
+          "coordinates": "-71.083801,42.352978,0.000000"
+        },
+        {
+          "name": "Massachusetts Ave. Bridge (Harvard Bridge) Footbridge",
+          "description": "Massachusetts Ave. Bridge &amp; Storrow Dr.<div>Boston, MA 02115<br><a href=\"http://maps.google.com/maps/place?ftid=0x89e37a0440199bb9:0x6efaf3557b11fc36&amp;q=Massachusetts+Ave+Bridge+%26+Storrow+Dr,+Boston,+MA+02115&amp;hl=en&amp;authuser=0&amp;cd=1&amp;cad=src:ppiwlink&amp;ei=m6uqT87ID8el8gaj4aHhBA&amp;sig2=X8jehW9dXXCX1eKSVoJsfA&amp;dtab=5\" target=\"_blank\"><img src=\"http://cbk0.google.com/cbk?output=thumbnail&amp;w=90&amp;h=68&amp;ll=42.351720,-71.089852&amp;thumb=0\"></a></div>",
+          "category": "1",
+          "coordinates": "-71.089851,42.351719,0.000000"
+        },
+        {
+          "name": "Silber Way Footbridge",
+          "description": "Back St &amp; Silber Way<div>Boston, MA 02215<br><a href=\"http://maps.google.com/maps/place?ftid=0x89e379f833312f3d:0x6e7506da48ac1cc5&amp;q=Back+St.+%26+Silber+Way,+Boston,+MA+02215&amp;hl=en&amp;authuser=0&amp;cd=1&amp;cad=src:ppiwlink&amp;ei=q6uqT7qlKsfT8AbBhvTkBA&amp;sig2=rVY6H6xz5zZ-1pLadJgRWg&amp;dtab=5\" target=\"_blank\"><img src=\"http://cbk0.google.com/cbk?output=thumbnail&amp;w=90&amp;h=68&amp;ll=42.350785,-71.100255&amp;thumb=0\"></a></div>",
+          "category": "1",
+          "coordinates": "-71.100258,42.350784,0.000000"
+        },
+        {
+          "name": "Bay State Road Footbridge",
+          "description": "<div dir=\"ltr\">BU Beach <br>Bay State Road<br>Boston, MA 02115</div>",
+          "category": "1",
+          "coordinates": "-71.106033,42.351147,0.000000"
+        },
+        {
+          "name": "Charlesbank Playground",
+          "category": "2",
+          "coordinates": "-71.069794,42.365616,0.000000"
+        },
+        {
+          "name": "Esplanade Playspace",
+          "category": "2",
+          "coordinates": "-71.074463,42.356052,0.000000"
+        },
+        {
+          "name": "Stoneman Playground",
+          "category": "2",
+          "coordinates": "-71.086342,42.352699,0.000000"
+        },
+        {
+          "name": "Charles Bank Spray Pool",
+          "category": "2",
+          "coordinates": "-71.069977,42.365131,0.000000"
+        },
+        {
+          "name": "Dartmouth Landing",
+          "category": "2",
+          "coordinates": "-71.079590,42.354683,0.000000"
+        },
+        {
+          "name": "Gloucester Landing",
+          "category": "3",
+          "coordinates": "-71.086014,42.353027,0.000000"
+        },
+        {
+          "name": "Commissioners Landing",
+          "category": "3",
+          "coordinates": "-71.073227,42.358528,0.000000"
+        },
+        {
+          "name": "Storrow Memorial",
+          "category": "3",
+          "coordinates": "-71.085907,42.352814,0.000000"
+        },
+        {
+          "name": "Oliver Wendell Holmes Memorial",
+          "category": "4",
+          "coordinates": "-71.080566,42.354237,0.000000"
+        },
+        {
+          "name": "Arthur Fiedler Memorial Head",
+          "category": "4",
+          "coordinates": "-71.075531,42.356495,0.000000"
+        },
+        {
+          "name": "Lotta Fountain",
+          "category": "4",
+          "coordinates": "-71.075356,42.355728,0.000000"
+        },
+        {
+          "name": "Fiedler Field",
+          "category": "5",
+          "coordinates": "-71.075859,42.356251,0.000000"
+        },
+        {
+          "name": "Teddy Ebersol's Red Sox Field",
+          "category": "5",
+          "coordinates": "-71.072250,42.363476,0.000000"
+        },
+        {
+          "name": "Lee Pool",
+          "category": "5",
+          "coordinates": "-71.070770,42.364410,0.000000"
+        },
+        {
+          "name": "Community Boating",
+          "category": "5",
+          "coordinates": "-71.072937,42.359894,0.000000"
+        },
+        {
+          "name": "Union Boat Club",
+          "category": "5",
+          "coordinates": "-71.073387,42.357765,0.000000"
+        },
+        {
+          "name": "DCR Hatch Memorial Shell",
+          "description": "<div dir=\"ltr\">1 David G. Mugar Way</div>",
+          "category": "5",
+          "coordinates": "-71.073692,42.357338,0.000000"
+        },
+        {
+          "name": "Cafe Esplanade",
+          "category": "5",
+          "coordinates": "-71.074165,42.356304,0.000000"
+        },
+        {
+          "name": "Otis Grove",
+          "category": "5",
+          "coordinates": "-71.081245,42.354675,0.000000"
+        },
+        {
+          "name": "Tennis Courts",
+          "category": "5",
+          "coordinates": "-71.069244,42.366131,0.000000"
+        },
+        {
+          "name": "Dartmouth St. Comfort Station",
+          "category": "5",
+          "coordinates": "-71.080109,42.354408,0.000000"
+        },
+        {
+          "name": "Exercise Course",
+          "category": "5",
+          "coordinates": "-71.099815,42.351227,0.000000"
+        },
+        {
+          "name": "Boston University Sailing Pavilion",
+          "category": "5",
+          "coordinates": "-71.110329,42.352043,0.000000"
+        },
+        {
+          "name": "Boston Common Parking Garage",
+          "category": "6",
+          "coordinates": "-71.067444,42.352482,0.000000"
+        },
+        {
+          "name": "Motor Mart Garage",
+          "category": "6",
+          "coordinates": "-71.067741,42.350956,0.000000"
+        },
+        {
+          "name": "Charge Point Charging Station",
+          "category": "6",
+          "coordinates": "-71.074097,42.348171,0.000000"
+        },
+        {
+          "name": "Copley Place Parking",
+          "category": "6",
+          "coordinates": "-71.078300,42.347351,0.000000"
+        },
+        {
+          "name": "Prudential Center",
+          "category": "6",
+          "coordinates": "-71.081718,42.347420,0.000000"
+        },
+        {
+          "name": "Pilgrim Parking",
+          "category": "6",
+          "coordinates": "-71.085655,42.347069,0.000000"
+        },
+        {
+          "name": "LAZ Storrow Drive Parking Lot",
+          "description": "<div dir=\"ltr\">http://www.lazparking.com/parkers</div>",
+          "category": "6",
+          "coordinates": "-71.071777,42.361683,0.000000"
+        }
+      ]
+}
