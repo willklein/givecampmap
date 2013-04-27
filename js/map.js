@@ -67,14 +67,11 @@ var map;
 
 			icons[category.id] = L.icon({
 				iconUrl: category.icon,
-//				iconRetinaUrl: 'my-icon@2x.png',
 				iconSize: [31, 36],
-				iconAnchor: [16, 16]
-//				popupAnchor: [0, 0],
-//				shadowUrl: 'my-icon-shadow.png',
-//				shadowRetinaUrl: 'my-icon-shadow@2x.png',
-//				shadowSize: [68, 95],
-//				shadowAnchor: [22, 94]
+				iconAnchor: [16, 16],
+                shadowUrl: 'img/drops.png',
+				shadowSize: [55, 36], /*62x36 would be proportional*/
+				shadowAnchor: [13, 15]
 			});
 		});
 		$(data.places).each(function(i, place) {
