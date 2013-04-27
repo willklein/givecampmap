@@ -36,11 +36,10 @@ var map;
 (function($) {
 
 	var icons = {},
-		layers = {},
 		categories = [],
 		places = [],
 		mapLayers = {};
-    
+
     var renderFor = function(selector) {
         var templateSrc = $(selector).text();
         var template = Handlebars.compile(templateSrc);
@@ -82,11 +81,10 @@ var map;
 			layerGroups = {};
 
 		$(categories).each(function(i, category) {
-//			$legend.append($('<label data-id="' + category.id + '"><img src="' + category.icon + '" />' + category.title + '</label>'));
             labels.push(renderLegendLabel(category));
 			layerGroups[category.id] = [];
 		});
-        
+
         $legend.append(labels.join());
 		$map.after($legend);
 
@@ -98,9 +96,11 @@ var map;
                 icon: icons[place.category],
                 title: place.name
             });
-            var popupHtml = renderPopup(place); 
-            
+            var popupHtml = renderPopup(place);
+
             marker.bindPopup(popupHtml);
+            marker.on('click', markerClick);
+
 			layerGroups[place.category].push(marker);
 		});
 
@@ -108,6 +108,19 @@ var map;
 			mapLayers[category.id] = L.layerGroup(layerGroups[category.id]);
 			map.addLayer(mapLayers[category.id]);
 		});
+	}
+
+	function markerClick(e) {
+		var latLngMap = map.getBounds(),
+			sw = latLngMap.getSouthWest(),
+			ne = latLngMap.getNorthEast(),
+			latExtent = sw.lat - ne.lat,
+			lngExtent = sw.lng - ne.lng,
+			eventLatLng = this.getLatLng(),
+			lat = eventLatLng.lat,
+			lng = eventLatLng.lng;
+
+		map.panTo([lat - latExtent * 0.3, lng + lngExtent * 0.3]);
 	}
 
 	function init() {
@@ -119,9 +132,10 @@ var map;
 			}
 		});
 
+		// legend click
 		$(document).on('click', 'label', function(e) {
-			var $el = $(this);
-			var id = $el.data('id');
+			var $el = $(this),
+				id = $el.data('id');
 
 			if ($el.hasClass('disabled')) {
 				// toggle map markers on
