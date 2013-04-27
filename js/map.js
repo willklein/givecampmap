@@ -59,7 +59,7 @@ var map;
     var renderPopup = renderFor('#mapPopup');
     var renderLegendLabel = renderFor('#legendLabel');
 
-    var $popupDetails = $('#popupDetails')
+    var $popupDetails = $('#popupDetails');
 
 	function processData(data) {
 		$(data.categories).each(function(i, category) {
