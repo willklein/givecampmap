@@ -25,9 +25,9 @@ var layerControl = L.control.layers.provided(baseMaps).addTo(map);
 
 //L.control.layers(baseMaps, overlayMaps).addTo(map);
 
-var marker = L.marker([42.356324, -71.075578]).addTo(map);
+//var marker = L.marker([42.356324, -71.075578]).addTo(map);
 
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+//marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 
 
 (function($) {
@@ -70,11 +70,11 @@ marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 		$(places).each(function(i, place) {
 			latlong = place.coordinates.split(',');
 			L.marker([
-				parseInt(latlong[0], 10),
-				parseInt(latlong[1], 10)
+				parseInt(latlong[1], 10),
+				parseInt(latlong[0], 10)
 			], {
 				icon: icons[place.category],
-				title: place.title
+				title: place.name
 			}).addTo(map);
 		});
 
@@ -101,7 +101,7 @@ marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 	}
 
 	$(document).ready(function() {
-//		init();
+		init();
 	});
 
 })(jQuery);
