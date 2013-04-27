@@ -75,11 +75,10 @@ var map;
 		$map.after($legend);
 
 		$(places).each(function(i, place) {
-			latlong = place.coordinates.split(',');
 			layerGroups[place.category].push(
 				L.marker([
-					parseFloat(latlong[1], 10),
-					parseFloat(latlong[0], 10)
+					place.lat,
+					place.lng
 				], {
 					icon: icons[place.category],
 					title: place.name
