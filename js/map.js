@@ -6,6 +6,6 @@
 //}).addTo(map);
 
 
-var map = new L.Map('map', {center: new L.LatLng(51.51, -0.11), zoom: 9});
+var map = new L.Map('map', {center: new L.LatLng(42.357688, -71.073518), zoom: 14});
 var googleLayer = new L.Google('ROADMAP');
 map.addLayer(googleLayer);
