@@ -59,6 +59,8 @@ var map;
     var renderPopup = renderFor('#mapPopup');
     var renderLegendLabel = renderFor('#legendLabel');
 
+    var $popupDetails = $('#popupDetails')
+
 	function processData(data) {
 		$(data.categories).each(function(i, category) {
 			categories.push(category);
@@ -118,11 +120,17 @@ var map;
 			mapLayers[category.id] = L.layerGroup(layerGroups[category.id]);
 			map.addLayer(mapLayers[category.id]);
 		});
+        
+        map.on('mousedown', hideDetails);
 	}
-    
+
     function showDetails(html) {
-        var $popupDetails = $('#popupDetails').show();
+        $popupDetails.show();
         $popupDetails.html(html);
+    }
+
+    function hideDetails() {
+        $popupDetails.hide();
     }
 
 	function markerClick(e) {
