@@ -1,34 +1,36 @@
-
-
-
-var map = new L.Map('map', {center: new L.LatLng(42.357688, -71.073518), zoom: 14});
-//var googleLayer = new L.Google('ROADMAP');
-//map.addLayer(googleLayer);
-
-
-//var baseMaps = {
-//        "Stamen.Watercolor",
-//        "OpenStreetMap.Mapnik": "OpenStreetMap.Mapnik",
-//    };
-
-var baseMaps = [
-        "OpenStreetMap.Mapnik"
-    ];
-
-var overlayMaps = [
-//        "OpenWeatherMap.Clouds"
-    ];
-
-var layerControl = L.control.layers.provided(baseMaps).addTo(map);
-//you can still add your own after with
-//layerControl.addBaseLayer(layer,name);
-
-//L.control.layers(baseMaps, overlayMaps).addTo(map);
-
-var marker = L.marker([42.356324, -71.075578]).addTo(map);
-
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-
+(function() {
+    var options = {
+        center: new L.LatLng(42.357688, -71.073518), zoom: 14
+    };
+    
+    var map = new L.Map('map', options);
+    //var googleLayer = new L.Google('ROADMAP');
+    //map.addLayer(googleLayer);
+    
+    
+    //var baseMaps = {
+    //        "Stamen.Watercolor",
+    //        "OpenStreetMap.Mapnik": "OpenStreetMap.Mapnik",
+    //    };
+    
+    var baseMaps = [
+            "OpenStreetMap.Mapnik"
+        ];
+    
+    var overlayMaps = [
+    //        "OpenWeatherMap.Clouds"
+        ];
+    
+    var layerControl = L.control.layers.provided(baseMaps).addTo(map);
+    //you can still add your own after with
+    //layerControl.addBaseLayer(layer,name);
+    
+    //L.control.layers(baseMaps, overlayMaps).addTo(map);
+    
+    var marker = L.marker([42.356324, -71.075578]).addTo(map);
+    
+    marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+})();
 
 (function($) {
 
