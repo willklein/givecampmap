@@ -85,7 +85,7 @@ var map;
 			layerGroups[category.id] = [];
 		});
 
-        $legend.append(labels.join());
+        $legend.append(labels.join(''));
 		$map.after($legend);
 
 		$(places).each(function(i, place) {
