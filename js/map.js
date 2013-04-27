@@ -83,10 +83,10 @@ var map;
 	}
 
 	function createUI() {
-		var $map = $('#map'),
+        var $container = $('#container'),
+		    $map = $('#map'),
 			$legend = $('<div id="legend">'),
             labels = [],
-			latlong,
 			layerGroups = {};
 
 		$(categories).each(function(i, category) {
@@ -107,7 +107,6 @@ var map;
             });
             var popupHtml = renderPopup(place);
 
-//            marker.bindPopup(popupHtml);
             marker.on('click', function(e) {
                 markerClick.call(this, e);
                 showDetails(popupHtml);
@@ -122,6 +121,10 @@ var map;
 		});
         
         map.on('mousedown', hideDetails);
+        
+        $container.on('click', '#popupClose', function(e) {
+            hideDetails();
+        });
 	}
 
     function showDetails(html) {

@@ -1,7 +1,7 @@
 body {
 	font-family: sans-serif;
 }
-.container {
+#container {
     position: relative;
 	margin: 0 auto;
     width: 1020px;
@@ -52,16 +52,25 @@ body {
     padding: 5px 10px;
 }
 
-#popupContent .close-button {
+#popupContent .close-button a {
     /*float: right;*/
-    display: none;
+    /*display: none;*/
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+#popupContent .close-button a:visited {
+    color: #fff;
 }
 
 .popup-img-container,
 .popup-text-container {
     height: 355px;
     float: left;
-    width: 225px;
+    width: 227px;
 }
 
 
