@@ -143,7 +143,7 @@ var map;
 			lat = eventLatLng.lat,
 			lng = eventLatLng.lng;
 
-		map.panTo([lat - latExtent * 0.3, lng + lngExtent * 0.3]);
+		map.panTo([lat - latExtent * 0, lng + lngExtent * 0.18]);
         
         showDetails(e);
 	}
