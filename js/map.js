@@ -10,12 +10,12 @@ var map;
     map = new L.Map('map', options);
     
     var baseMaps = [
-            "OpenStreetMap.Mapnik"
-        ];
+        'OpenStreetMap.Mapnik'
+    ];
     
     var overlayMaps = [
-    //        "OpenWeatherMap.Clouds"
-        ];
+//        'OpenWeatherMap.Clouds'
+    ];
     
     var layerControl = L.control.layers.provided(baseMaps).addTo(map);
     //you can still add your own after with
@@ -23,9 +23,9 @@ var map;
     
     //L.control.layers(baseMaps, overlayMaps).addTo(map);
     
-    var marker = L.marker([42.356324, -71.075578]).addTo(map);
+//    var marker = L.marker([42.356324, -71.075578]).addTo(map);
     
-    marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+//    marker.bindPopup('<b>Hello world!</b><br>I am a popup.').openPopup();
 })();
 
 
