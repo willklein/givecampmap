@@ -4,7 +4,12 @@ var map;
     var options = {
         center: new L.LatLng(42.354770, -71.093431),
         zoom: 14,
-        minZoom: 14
+        minZoom: 14,
+        maxBounds: new L.LatLngBounds(
+                new L.LatLng(43.3, -71.19),
+                new L.LatLng(41.85, -70.98)
+                        
+        )
     };
 
     map = new L.Map('map', options);
