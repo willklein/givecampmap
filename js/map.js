@@ -14,7 +14,7 @@ var baseLayers = ["Stamen.Watercolor","OpenStreetMap.Mapnik"],
         overlays = ["OpenWeatherMap.Clouds"];
 var layerControl = L.control.layers.provided(baseLayers,overlays).addTo(map);
 //you can still add your own after with 
-layerControl.addBaseLayer(layer,name);
+//layerControl.addBaseLayer(layer,name);
 
 var marker = L.marker([42.356324, -71.075578]).addTo(map);
 
