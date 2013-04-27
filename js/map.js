@@ -10,11 +10,25 @@ var map = new L.Map('map', {center: new L.LatLng(42.357688, -71.073518), zoom: 1
 //var googleLayer = new L.Google('ROADMAP');
 //map.addLayer(googleLayer);
 
-var baseLayers = ["Stamen.Watercolor","OpenStreetMap.Mapnik"],
-        overlays = ["OpenWeatherMap.Clouds"];
-var layerControl = L.control.layers.provided(baseLayers,overlays).addTo(map);
+
+//var baseMaps = {
+//        "Stamen.Watercolor",
+//        "OpenStreetMap.Mapnik": "OpenStreetMap.Mapnik",
+//    };
+
+var baseMaps = [
+        "OpenStreetMap.Mapnik"
+    ];
+
+var overlayMaps = [
+//        "OpenWeatherMap.Clouds"
+    ];
+
+var layerControl = L.control.layers.provided(baseMaps).addTo(map);
 //you can still add your own after with 
 //layerControl.addBaseLayer(layer,name);
+
+//L.control.layers(baseMaps, overlayMaps).addTo(map);
 
 var marker = L.marker([42.356324, -71.075578]).addTo(map);
 

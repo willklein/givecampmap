@@ -1,4 +1,6 @@
 #map {
+    clear: both;
     height: 400px;
-    width: 800px;
+    width: 1020px;
+    margin: 0 auto;
 }
