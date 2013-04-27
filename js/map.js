@@ -8,14 +8,16 @@ var map;
         maxBounds: new L.LatLngBounds(
                 new L.LatLng(43.3, -71.19),
                 new L.LatLng(41.85, -70.98)
-                        
         )
     };
 
     map = new L.Map('map', options);
 
     var baseMaps = [
-        'OpenStreetMap.Mapnik'
+        'Thunderforest.Transport',
+        'MapQuestOpen.OSM',
+        'OpenStreetMap.Mapnik',
+        'Stamen.Watercolor'
     ];
 
     var overlayMaps = [
@@ -26,7 +28,7 @@ var map;
 
     var layerControl = L.control.layers.provided(baseMaps).addTo(map);
 
-    layerControl.removeFrom(map);
+//    layerControl.removeFrom(map);
 
     //you can still add your own after with
     //layerControl.addBaseLayer(layer,name);

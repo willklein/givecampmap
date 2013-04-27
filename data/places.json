@@ -29,6 +29,11 @@
           "id": "6",
           "title": "Parking",
           "icon": "http://maps.gstatic.com/mapfiles/ms2/micons/cabs.png"
+        },
+        {
+          "id": "7",
+          "title": "Police",
+          "icon": "img/state_police_barracks.png"
         }
       ],
       "places": [
@@ -266,7 +271,7 @@
         {
           "name": "LAZ Storrow Drive Parking Lot",
           "description": "<div dir=\"ltr\">http://www.lazparking.com/parkers</div>",
-          "category": "6",
+          "category": "7",
           "lat": 42.361683,
           "lng": -71.071777
         }
