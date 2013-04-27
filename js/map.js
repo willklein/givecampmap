@@ -61,6 +61,16 @@ var map;
 			places.push(place);
 		});
 	}
+    
+    var renderPopup = (function() {
+        var templateSrc = $('#mapPopup').text();
+        
+        var template = Handlebars.compile(templateSrc);
+        
+        return function(data) {
+            return template(data);  
+        };
+    })();
 
 	function createUI() {
 		var $map = $('#map'),
@@ -75,15 +85,17 @@ var map;
 		$map.after($legend);
 
 		$(places).each(function(i, place) {
-			layerGroups[place.category].push(
-				L.marker([
-					place.lat,
-					place.lng
-				], {
-					icon: icons[place.category],
-					title: place.name
-				})
-			);
+            var marker = L.marker([
+                place.lat,
+                place.lng
+            ], {
+                icon: icons[place.category],
+                title: place.name
+            });
+            var popupHtml = renderPopup(place); 
+            
+            marker.bindPopup(popupHtml);
+			layerGroups[place.category].push(marker);
 		});
 
 		$(categories).each(function(i, category) {
