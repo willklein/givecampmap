@@ -2,7 +2,9 @@ var map;
 
 (function() {
     var options = {
-        center: new L.LatLng(42.357688, -71.073518), zoom: 14
+        center: new L.LatLng(42.357688, -71.073518),
+        zoom: 14,
+        minZoom: 14
     };
     
     map = new L.Map('map', options);
