@@ -1,3 +1,4 @@
+
 (function() {
     var options = {
         center: new L.LatLng(42.357688, -71.073518), zoom: 14
@@ -31,6 +32,7 @@
     
     marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 })();
+
 
 (function($) {
 
@@ -72,11 +74,11 @@
 		$(places).each(function(i, place) {
 			latlong = place.coordinates.split(',');
 			L.marker([
-				parseInt(latlong[0], 10),
-				parseInt(latlong[1], 10)
+				parseInt(latlong[1], 10),
+				parseInt(latlong[0], 10)
 			], {
 				icon: icons[place.category],
-				title: place.title
+				title: place.name
 			}).addTo(map);
 		});
 
@@ -103,7 +105,7 @@
 	}
 
 	$(document).ready(function() {
-//		init();
+		init();
 	});
 
 })(jQuery);

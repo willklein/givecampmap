@@ -1,10 +1,13 @@
 body {
 	font-family: sans-serif;
 }
+.container {
+	margin: 0 auto;
+    width: 1020px;
+}
 #map {
     clear: both;
     height: 400px;
-    width: 1020px;
     margin: 0 auto;
 }
 #legend {
