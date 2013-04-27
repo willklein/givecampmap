@@ -45,7 +45,7 @@ body {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
     height: 380px;
     color: #fff;
-    z-index: 8;
+    z-index: 1001;
 }
 
 #popupContent {
@@ -59,19 +59,21 @@ body {
 
 .popup-img-container,
 .popup-text-container {
-    padding: 10px;
-    height: 300px;
+    height: 355px;
     float: left;
-    width: 200px;
+    width: 225px;
 }
 
 
 .popup-img-container {
+    margin-top: 5px;
     overflow-x: hidden;
+    border: 3px solid #fff;
 }
 
 .popup-text-container{
     overflow-y: scroll;
+    padding: 10px;
 }
 
 #popupContent h3 {
