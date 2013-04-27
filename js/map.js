@@ -14,8 +14,8 @@ var map;
     map = new L.Map('map', options);
 
     var baseMaps = [
-        'Thunderforest.Transport',
         'MapQuestOpen.OSM',
+        'Thunderforest.Transport',
         'OpenStreetMap.Mapnik',
         'Stamen.Watercolor'
     ];
@@ -105,8 +105,11 @@ var map;
             });
             var popupHtml = renderPopup(place);
 
-            marker.bindPopup(popupHtml);
-            marker.on('click', markerClick);
+//            marker.bindPopup(popupHtml);
+            marker.on('click', function(e) {
+                markerClick.call(this, e);
+                showDetails(popupHtml);
+            });
 
 			layerGroups[place.category].push(marker);
 		});
@@ -116,6 +119,11 @@ var map;
 			map.addLayer(mapLayers[category.id]);
 		});
 	}
+    
+    function showDetails(html) {
+        var $popupDetails = $('#popupDetails').show();
+        $popupDetails.html(html);
+    }
 
 	function markerClick(e) {
 		var latLngMap = map.getBounds(),
@@ -128,6 +136,8 @@ var map;
 			lng = eventLatLng.lng;
 
 		map.panTo([lat - latExtent * 0.3, lng + lngExtent * 0.3]);
+        
+        showDetails(e);
 	}
 
 	function init() {

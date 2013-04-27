@@ -24,3 +24,23 @@ body {
 #legend label.disabled {
 	opacity: 0.5;
 }
+
+#popupDetails {
+
+    position: absolute;
+    left: 0;
+    width: 290px;
+    padding: 5px 10px;
+    margin-left: 40px;
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(0, 0, 0);
+    /* RGBa with 0.7 opacity */
+    background: rgba(0, 0, 0, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+    height: 100%;
+    color: #fff;
+    z-index: 1;
+}
