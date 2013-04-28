@@ -191,7 +191,7 @@ License: None
 					$d = str_replace("\n", '', $d);
 					$out .= "\t\t\t" . '"name" : "' . $d . '",' . "\n";
 					$d = str_replace('"', '\"', $post->post_excerpt);
-					$d = str_replace("\n", '', $d);
+					$d = str_replace(array("\n", "\r"), '', $d);
 					$out .= "\t\t\t" . '"excerpt" : "' . $d . '",' . "\n";
 					$out .= "\t\t\t" . '"categories" : [ ';
 					$cats = get_the_terms($post->ID, 'tea_map_location_taxonomy');
