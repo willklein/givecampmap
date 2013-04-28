@@ -52,7 +52,7 @@ body {
     padding: 5px 10px;
 }
 
-#teamap-popupContent .close-button a {
+#teamap-popupContent .teamap-close-button a {
     /*float: right;*/
     /*display: none;*/
     position: absolute;
@@ -62,7 +62,7 @@ body {
     color: #fff;
 }
 
-#teamap-popupContent .close-button a:visited {
+#teamap-popupContent .teamap-close-button a:visited {
     color: #fff;
 }
 

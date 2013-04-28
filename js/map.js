@@ -11,12 +11,12 @@
     // Setup the map
     var options = {
         center: new L.LatLng(42.354770, -71.093431),
-        zoom: 14,
-        minZoom: 14,
-        maxBounds: new L.LatLngBounds(
-                new L.LatLng(43.3, -71.19),
-                new L.LatLng(41.85, -70.98)
-        )
+        zoom: 14
+//        minZoom: 14,
+//        maxBounds: new L.LatLngBounds(
+//                new L.LatLng(43.3, -71.19),
+//                new L.LatLng(41.85, -70.98)
+//        )
     };
 
     var map;
@@ -27,10 +27,10 @@
         map = new L.Map('teamap-map', options);
 
         var baseMaps = [
-            'MapQuestOpen.OSM',
-            'Thunderforest.Transport',
-            'OpenStreetMap.Mapnik',
-            'Stamen.Watercolor'
+            'MapQuestOpen.OSM'
+//            'Thunderforest.Transport',
+//            'OpenStreetMap.Mapnik',
+//            'Stamen.Watercolor'
         ];
 
         var layerControl = L.control.layers.provided(baseMaps).addTo(map);
@@ -82,7 +82,7 @@
 	function createUI() {
         var $container = $('#teamap-container'),
 		    $map = $('#teamap-map'),
-			$legend = $('<div id="teamap-legend">'),
+			$legend = $('<div id="teamap-legend" class="group">'),
             labels = [],
 			layerGroups = {};
 
@@ -91,7 +91,8 @@
 			layerMarkers[category.id] = [];
 		});
 
-        $legend.append('<ul>' + labels.join('') + '</ul>');
+        //TODO: move this into the template and build this differently
+        $legend.append('<ul>' + labels.join('') + '<li><a href="#" id="teamap-showall-categories">Show All</a></li></ul>');
 		$map.after($legend);
 
 		$(places).each(function(i, place) {
@@ -114,7 +115,9 @@
                 marker.on('click', function(e) {
                     markerClick.call(this, e);
                     showDetails(popupHtml);
-                    setHash(place.id);
+                    
+                    //Wordpress having issues w/ this
+//                    setHash(place.id);
                 });
 
                 //set the hashMarker for the current location hash
@@ -163,6 +166,7 @@
 	}
 
 	function init() {
+        var $legend = $('#teamap-legend');
         $.ajax({
             url: 'https://rawgithub.com/willklein/givecampmap/master/data/map.json',
             dataType: 'json',
@@ -176,7 +180,7 @@
         });
 
 		// legend click
-		$(document).on('click', 'label', function(e) {
+        $legend.on('click', 'label', function(e) {
 			var $el = $(this),
 				id = $el.data('id');
 
@@ -217,7 +221,25 @@
 
 				map.removeLayer(mapLayers[id]);
             });
+            
+            hideDetails();
 		});
+
+        $legend.on('click', '#teamap-showall-categories', function(e) {
+            var $el = $(this);
+
+            $el.parent().siblings('li').find('label').each(function() {
+                var $el = $(this),
+                    id = $el.data('id');
+
+                if (!map.hasLayer(mapLayers[id])) {
+                    map.addLayer(mapLayers[id]);
+                }
+            });
+
+            hideDetails();
+            e.preventDefault();
+        });
 	}
 
     function getHash() {
