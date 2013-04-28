@@ -26,12 +26,14 @@ var map;
 
 })();
 
-(function($) {
+(function($, global) {
 
 	var icons = {},
 		categories = [],
 		places = [],
-		mapLayers = {};
+		mapLayers = {},
+        hashMarker = null,
+        hash = null;
 
     Handlebars.registerHelper('validUrl', function(text) {
         return $.trim(text).length;
@@ -50,6 +52,10 @@ var map;
     var renderLegendLabel = renderFor('#legendLabel');
 
     var $popupDetails = $('#popupDetails');
+
+    function setHash(id) {
+        global.location.hash = "#id=" + id;
+    }
 
 	function processData(data) {
 		$(data.categories).each(function(i, category) {
@@ -102,7 +108,13 @@ var map;
             marker.on('click', function(e) {
                 markerClick.call(this, e);
                 showDetails(popupHtml);
+                setHash(place.id);
             });
+
+            //set the hashMarker for the current location hash
+            if (hash && place && place.id === hash.replace("#id=", "")) {
+                hashMarker = marker;
+            }
 
 			layerGroups[place.categories[0]].push(marker);
 		});
@@ -145,10 +157,13 @@ var map;
 
 	function init() {
         $.ajax({
-            url: 'data/map.json',
+            url: 'https://rawgithub.com/willklein/givecampmap/master/data/map.json',
             success: function(data) {
                 processData(data);
                 createUI();
+                if (hashMarker) {
+                    hashMarker._icon.click();
+                }
             }
         });
 
@@ -168,9 +183,14 @@ var map;
 		});
 	}
 
+    function getHash() {
+        hash = global.location.hash;
+    }
+
 	$(document).ready(function() {
+        getHash();
 		init();
 	});
 
-})(jQuery);
+})(jQuery, this);
 
