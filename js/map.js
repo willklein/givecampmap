@@ -4,6 +4,7 @@
 		categories = [],
 		places = [],
 		mapLayers = {},
+        layerMarkers = {},
         hashMarker = null,
         hash = null;
 
@@ -18,36 +19,42 @@
         )
     };
 
-    var map = new L.Map('teamap-map', options);
+    var map;
+    var $popupDetails;
+    var renderPopup;
+    var renderLegendLabel;
+    function initMapBase() {
+        map = new L.Map('teamap-map', options);
 
-    var baseMaps = [
-        'MapQuestOpen.OSM',
-        'Thunderforest.Transport',
-        'OpenStreetMap.Mapnik',
-        'Stamen.Watercolor'
-    ];
+        var baseMaps = [
+            'MapQuestOpen.OSM',
+            'Thunderforest.Transport',
+            'OpenStreetMap.Mapnik',
+            'Stamen.Watercolor'
+        ];
 
-    var layerControl = L.control.layers.provided(baseMaps).addTo(map);
+        var layerControl = L.control.layers.provided(baseMaps).addTo(map);
 
-    layerControl.removeFrom(map);
+        layerControl.removeFrom(map);
 
-    Handlebars.registerHelper('validUrl', function(text) {
-        return $.trim(text).length;
-    });
+        Handlebars.registerHelper('validUrl', function(text) {
+            return $.trim(text).length;
+        });
 
-    var renderFor = function(selector) {
-        var templateSrc = $(selector).text();
-        var template = Handlebars.compile(templateSrc);
+        var renderFor = function(selector) {
+            var templateSrc = $(selector).text();
+            var template = Handlebars.compile(templateSrc);
 
-        return function(data) {
-            return template(data);
+            return function(data) {
+                return template(data);
+            };
         };
-    };
 
-    var renderPopup = renderFor('#teamap-mapPopup');
-    var renderLegendLabel = renderFor('#teamap-legendLabel');
+        renderPopup = renderFor('#teamap-mapPopup');
+        renderLegendLabel = renderFor('#teamap-legendLabel');
 
-    var $popupDetails = $('#teamap-popupDetails');
+        $popupDetails = $('#teamap-popupDetails');
+    }
 
     function setHash(id) {
         global.location.hash = "#id=" + id;
@@ -81,7 +88,7 @@
 
 		$(categories).each(function(i, category) {
             labels.push(renderLegendLabel(category));
-			layerGroups[category.id] = [];
+			layerMarkers[category.id] = [];
 		});
 
         $legend.append('<ul>' + labels.join('') + '</ul>');
@@ -115,12 +122,12 @@
                     hashMarker = marker;
                 }
 
-    			layerGroups[category].push(marker);
+    			layerMarkers[category].push(marker);
             });
 		});
 
 		$(categories).each(function(i, category) {
-			mapLayers[category.id] = L.layerGroup(layerGroups[category.id]);
+			mapLayers[category.id] = L.layerGroup(layerMarkers[category.id]);
 			map.addLayer(mapLayers[category.id]);
 		});
 
@@ -173,19 +180,37 @@
 			var $el = $(this),
 				id = $el.data('id');
 
-//			if ($el.hasClass('disabled')) {
-//				// toggle map markers on
-//				map.addLayer(mapLayers[id]);
-//			} else {
-//				// toggle map markers off
-//				map.removeLayer(mapLayers[id]);
-//			}
-//			$el.toggleClass('disabled');
-            
             if (!map.hasLayer(mapLayers[id])) {
 				map.addLayer(mapLayers[id]);
             }
-            
+
+            var regionBounds = {
+                southWest: {
+                    lat: Infinity,
+                    lng: Infinity
+                },
+                northEast: {
+                    lat: -Infinity,
+                    lng: -Infinity
+                }
+            };
+
+            var markerLatLng;
+            $(layerMarkers[id]).each(function(i, marker) {
+                markerLatLng = marker.getLatLng();
+                regionBounds.southWest.lat = Math.min(regionBounds.southWest.lat, markerLatLng.lat);
+                regionBounds.southWest.lng = Math.min(regionBounds.southWest.lng, markerLatLng.lng);
+                regionBounds.northEast.lat = Math.max(regionBounds.northEast.lat, markerLatLng.lat);
+                regionBounds.northEast.lng = Math.max(regionBounds.northEast.lng, markerLatLng.lng);
+            });
+
+            regionBounds = new L.LatLngBounds(
+                    new L.LatLng(regionBounds.southWest.lat, regionBounds.southWest.lng),
+                    new L.LatLng(regionBounds.northEast.lat, regionBounds.northEast.lng)
+            );
+
+            map.fitBounds(regionBounds);
+
             $el.parent().siblings('li').find('label').each(function() {
                 var $el = $(this),
                     id = $el.data('id');
@@ -200,6 +225,7 @@
     }
 
 	$(document).ready(function() {
+        initMapBase();
         getHash();
 		init();
 	});
