@@ -1,22 +1,22 @@
 (function($, global) {
 
-	var icons = {},
-		categories = [],
-		places = [],
-		mapLayers = {},
-        layerMarkers = {},
-        hashMarker = null,
-        hash = null;
+    var icons = {},
+            categories = [],
+            places = [],
+            mapLayers = {},
+            layerMarkers = {},
+            hashMarker = null,
+            hash = null;
 
     // Setup the map
     var options = {
         center: new L.LatLng(42.354770, -71.093431),
         zoom: 14
-//        minZoom: 14,
-//        maxBounds: new L.LatLngBounds(
-//                new L.LatLng(43.3, -71.19),
-//                new L.LatLng(41.85, -70.98)
-//        )
+        //minZoom: 14,
+        //maxBounds: new L.LatLngBounds(
+        //        new L.LatLng(43.3, -71.19),
+        //        new L.LatLng(41.85, -70.98)
+        //)
     };
 
     var map;
@@ -28,9 +28,9 @@
 
         var baseMaps = [
             'MapQuestOpen.OSM'
-//            'Thunderforest.Transport',
-//            'OpenStreetMap.Mapnik',
-//            'Stamen.Watercolor'
+            //'Thunderforest.Transport',
+            //'OpenStreetMap.Mapnik',
+            //'Stamen.Watercolor'
         ];
 
         var layerControl = L.control.layers.provided(baseMaps).addTo(map);
@@ -60,42 +60,42 @@
         global.location.hash = "#id=" + id;
     }
 
-	function processData(data) {
-		$(data.categories).each(function(i, category) {
-			categories.push(category);
+    function processData(data) {
+        $(data.categories).each(function(i, category) {
+            categories.push(category);
 
-			icons[category.id] = L.icon({
-				iconUrl: category.icon,
-				iconSize: [31, 36],
-				iconAnchor: [16, 32],
-                shadowUrl: 'img/drops.png',
-				shadowSize: [55, 36], /*62x36 would be proportional*/
-				shadowAnchor: [13, 31]
-			});
-		});
-		$(data.places).each(function(i, place) {
-			places.push(place);
-		});
-	}
+            icons[category.id] = L.icon({
+                iconUrl: category.icon,
+                iconSize: [31, 36],
+                iconAnchor: [16, 32],
+                shadowUrl: '/wp-content/plugins/teamaplocator/img/drops.png',
+                shadowSize: [55, 36], /*62x36 would be proportional*/
+                shadowAnchor: [13, 31]
+            });
+        });
+        $(data.places).each(function(i, place) {
+            places.push(place);
+        });
+    }
 
 
-	function createUI() {
+    function createUI() {
         var $container = $('#teamap-container'),
-		    $map = $('#teamap-map'),
-			$legend = $('<div id="teamap-legend" class="group">'),
-            labels = [],
-			layerGroups = {};
+                $map = $('#teamap-map'),
+                $legend = $('<div id="teamap-legend" class="group">'),
+                labels = [],
+                layerGroups = {};
 
-		$(categories).each(function(i, category) {
+        $(categories).each(function(i, category) {
             labels.push(renderLegendLabel(category));
-			layerMarkers[category.id] = [];
-		});
+            layerMarkers[category.id] = [];
+        });
 
         //TODO: move this into the template and build this differently
-        $legend.append('<ul>' + labels.join('') + '<li><a href="#" id="teamap-showall-categories">Show All</a></li></ul>');
-		$map.after($legend);
+        $legend.append('<div class="teamap-reset-map">Reset Map</div><ul>' + labels.join('') + '</ul>');
+        $map.after($legend);
 
-		$(places).each(function(i, place) {
+        $(places).each(function(i, place) {
             $(place.categories).each(function(i, category) {
 
                 var marker = L.marker([
@@ -115,9 +115,7 @@
                 marker.on('click', function(e) {
                     markerClick.call(this, e);
                     showDetails(popupHtml);
-                    
-                    //Wordpress having issues w/ this
-//                    setHash(place.id);
+                    //setHash(place.id);
                 });
 
                 //set the hashMarker for the current location hash
@@ -125,21 +123,21 @@
                     hashMarker = marker;
                 }
 
-    			layerMarkers[category].push(marker);
+                layerMarkers[category].push(marker);
             });
-		});
+        });
 
-		$(categories).each(function(i, category) {
-			mapLayers[category.id] = L.layerGroup(layerMarkers[category.id]);
-			map.addLayer(mapLayers[category.id]);
-		});
+        $(categories).each(function(i, category) {
+            mapLayers[category.id] = L.layerGroup(layerMarkers[category.id]);
+            map.addLayer(mapLayers[category.id]);
+        });
 
         map.on('mousedown', hideDetails);
 
         $container.on('click', '#teamap-popupClose', function(e) {
             hideDetails();
         });
-	}
+    }
 
     function showDetails(html) {
         $popupDetails.show();
@@ -150,52 +148,55 @@
         $popupDetails.hide();
     }
 
-	function markerClick(e) {
-		var latLngMap = map.getBounds(),
-			sw = latLngMap.getSouthWest(),
-			ne = latLngMap.getNorthEast(),
-			latExtent = sw.lat - ne.lat,
-			lngExtent = sw.lng - ne.lng,
-			eventLatLng = this.getLatLng(),
-			lat = eventLatLng.lat,
-			lng = eventLatLng.lng;
+    function markerClick(e) {
+        var latLngMap = map.getBounds(),
+                sw = latLngMap.getSouthWest(),
+                ne = latLngMap.getNorthEast(),
+                latExtent = sw.lat - ne.lat,
+                lngExtent = sw.lng - ne.lng,
+                eventLatLng = this.getLatLng(),
+                lat = eventLatLng.lat,
+                lng = eventLatLng.lng;
 
-		map.panTo([lat - latExtent * 0, lng + lngExtent * 0.18]);
+        map.panTo([lat - latExtent * 0, lng + lngExtent * 0.18]);
 
         showDetails(e);
-	}
+    }
 
-	function init() {
+    function init() {
         var $container = $('#teamap-container');
-        $.ajax({
-            url: 'https://rawgithub.com/willklein/givecampmap/master/data/map.json',
-//            url: 'http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/json/map.json',
-            dataType: 'json',
-            success: function(data) {
-                processData(data);
-                createUI();
-                if (hashMarker) {
-                    hashMarker._icon.click();
-                }
-            }, complete: function(data, textStatus) {
-                //
+        /*
+         $.ajax({
+         url: 'https://rawgithub.com/willklein/givecampmap/master/data/map.json',
+         dataType: 'json',
+         success: function(data) {
+         processData(data);
+         createUI();
+         resetMap();
+         if (hashMarker) {
+         hashMarker._icon.click();
+         }
+         }
+         });
+         */
+
+        $.getJSON('/wp-content/plugins/teamaplocator/json/map.json', function(data) {
+            processData(data);
+            createUI();
+            resetMap();
+            if (hashMarker) {
+                hashMarker._icon.click();
             }
         });
-//        $.getJSON('http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/json/map.json', function(data) {
-//            processData(data);
-//            createUI();
-//            if (hashMarker) {
-//                hashMarker._icon.click();
-//            }
-//        });
 
-		// legend click
+        // legend click
         $container.on('click', 'label', function(e) {
-			var $el = $(this),
-				id = $el.data('id');
+            var $el = $(this),
+                    id = $el.data('id');
 
+            $el.removeClass('disabled');
             if (!map.hasLayer(mapLayers[id])) {
-				map.addLayer(mapLayers[id]);
+                map.addLayer(mapLayers[id]);
             }
 
             var regionBounds = {
@@ -225,41 +226,65 @@
 
             map.fitBounds(regionBounds);
 
-            $el.parent().siblings('li').find('label').each(function() {
+            $el.parent().siblings('li').find('label').each(function(i, item) {
                 var $el = $(this),
-                    id = $el.data('id');
+                        id = $el.data('id');
+                $el.addClass('disabled');
 
-				map.removeLayer(mapLayers[id]);
+                map.removeLayer(mapLayers[id]);
             });
-            
-            hideDetails();
-		});
-
-        $container.on('click', '#teamap-showall-categories', function(e) {
-            var $el = $(this);
-
-            $el.parent().siblings('li').find('label').each(function() {
-                var $el = $(this),
-                    id = $el.data('id');
-
-                if (!map.hasLayer(mapLayers[id])) {
-                    map.addLayer(mapLayers[id]);
-                }
-            });
+            $('.teamap-reset-map').show();
 
             hideDetails();
-            e.preventDefault();
         });
-	}
+        $container.on('click', '.teamap-reset-map', resetMap);
+    }
+    function resetMap() {
+        var layer;
+        var regionBounds = {
+            southWest: {
+                lat: Infinity,
+                lng: Infinity
+            },
+            northEast: {
+                lat: -Infinity,
+                lng: -Infinity
+            }
+        };
+
+        $(categories).each(function(i, category) {
+            layer = mapLayers[category.id];
+            if (!map.hasLayer(layer)) {
+                map.addLayer(layer);
+            }
+
+            $(layerMarkers[category.id]).each(function(j, marker) {
+                markerLatLng = marker.getLatLng();
+                regionBounds.southWest.lat = Math.min(regionBounds.southWest.lat, markerLatLng.lat);
+                regionBounds.southWest.lng = Math.min(regionBounds.southWest.lng, markerLatLng.lng);
+                regionBounds.northEast.lat = Math.max(regionBounds.northEast.lat, markerLatLng.lat);
+                regionBounds.northEast.lng = Math.max(regionBounds.northEast.lng, markerLatLng.lng);
+            });
+        });
+        regionBounds = new L.LatLngBounds(
+                new L.LatLng(regionBounds.southWest.lat, regionBounds.southWest.lng),
+                new L.LatLng(regionBounds.northEast.lat, regionBounds.northEast.lng)
+        );
+
+        map.fitBounds(regionBounds);
+        $('.teamap-reset-map').hide();
+        $('label.disabled').removeClass('disabled');
+
+    }
 
     function getHash() {
         hash = global.location.hash;
     }
 
-	$(document).ready(function() {
+    $(document).ready(function() {
         initMapBase();
         getHash();
-		init();
-	});
+        init();
+    });
 
 })(jQuery, this);
