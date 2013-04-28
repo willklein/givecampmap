@@ -74,6 +74,7 @@ var map;
 			places.push(place);
 		});
 	}
+    
 
 	function createUI() {
         var $container = $('#container'),
@@ -115,7 +116,10 @@ var map;
             if (hash && place && place.id === hash.replace("#id=", "")) {
                 hashMarker = marker;
             }
-
+            
+//            $.each(place.categories, function(i) {
+//                layerGroups[place.categories[i]].push(marker);
+//            });
 			layerGroups[place.categories[0]].push(marker);
 		});
 
