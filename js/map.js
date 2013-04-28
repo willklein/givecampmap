@@ -67,10 +67,10 @@
 			icons[category.id] = L.icon({
 				iconUrl: category.icon,
 				iconSize: [31, 36],
-				iconAnchor: [16, 16],
+				iconAnchor: [16, 32],
                 shadowUrl: 'img/drops.png',
 				shadowSize: [55, 36], /*62x36 would be proportional*/
-				shadowAnchor: [13, 15]
+				shadowAnchor: [13, 31]
 			});
 		});
 		$(data.places).each(function(i, place) {
@@ -166,9 +166,10 @@
 	}
 
 	function init() {
-        var $legend = $('#teamap-legend');
+        var $container = $('#teamap-container');
         $.ajax({
             url: 'https://rawgithub.com/willklein/givecampmap/master/data/map.json',
+//            url: 'http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/json/map.json',
             dataType: 'json',
             success: function(data) {
                 processData(data);
@@ -176,11 +177,20 @@
                 if (hashMarker) {
                     hashMarker._icon.click();
                 }
+            }, complete: function(data, textStatus) {
+                //
             }
         });
+//        $.getJSON('http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/json/map.json', function(data) {
+//            processData(data);
+//            createUI();
+//            if (hashMarker) {
+//                hashMarker._icon.click();
+//            }
+//        });
 
 		// legend click
-        $legend.on('click', 'label', function(e) {
+        $container.on('click', 'label', function(e) {
 			var $el = $(this),
 				id = $el.data('id');
 
@@ -225,7 +235,7 @@
             hideDetails();
 		});
 
-        $legend.on('click', '#teamap-showall-categories', function(e) {
+        $container.on('click', '#teamap-showall-categories', function(e) {
             var $el = $(this);
 
             $el.parent().siblings('li').find('label').each(function() {
