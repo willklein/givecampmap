@@ -96,10 +96,10 @@ var map;
 
 		$(places).each(function(i, place) {
             var marker = L.marker([
-                place.lat,
-                place.lng
+                parseFloat(place.lat),
+                parseFloat(place.lng)
             ], {
-                icon: icons[place.category],
+                icon: icons[place.categories && place.categories[0]],
                 title: place.name
             });
             var popupHtml = renderPopup(place);
@@ -109,7 +109,7 @@ var map;
                 showDetails(popupHtml);
             });
 
-			layerGroups[place.category].push(marker);
+			layerGroups[place.categories[0]].push(marker);
 		});
 
 		$(categories).each(function(i, category) {
@@ -149,13 +149,16 @@ var map;
 	}
 
 	function init() {
-		$.ajax({
-			url: 'data/places.json',
-			success: function(data) {
-				processData(data);
-				createUI();
-			}
-		});
+        $.ajax({
+            url: 'data/map.json',
+            success: function(data) {
+                processData(data);
+                createUI();
+            },
+            complete: function(jqXHR, textStatus) {
+                //
+            }
+        });
 
 		// legend click
 		$(document).on('click', 'label', function(e) {
