@@ -20,24 +20,10 @@ var map;
         'Stamen.Watercolor'
     ];
 
-    var overlayMaps = [
-//        'OpenWeatherMap.Clouds'
-    ];
-
-//    L.TileLayer(baseMaps).addTo(map);
-
     var layerControl = L.control.layers.provided(baseMaps).addTo(map);
 
 //    layerControl.removeFrom(map);
 
-    //you can still add your own after with
-    //layerControl.addBaseLayer(layer,name);
-
-    //L.control.layers(baseMaps, overlayMaps).addTo(map);
-
-//    var marker = L.marker([42.356324, -71.075578]).addTo(map);
-
-//    marker.bindPopup('<b>Hello world!</b><br>I am a popup.').openPopup();
 })();
 
 (function($) {
@@ -47,6 +33,10 @@ var map;
 		places = [],
 		mapLayers = {};
 
+    Handlebars.registerHelper('validUrl', function(text) {
+        return $.trim(text).length;
+    });
+    
     var renderFor = function(selector) {
         var templateSrc = $(selector).text();
         var template = Handlebars.compile(templateSrc);
@@ -102,6 +92,11 @@ var map;
                 icon: icons[place.categories && place.categories[0]],
                 title: place.name
             });
+            
+            if (!place.imageUrl.length) {
+                delete place.imageUrl;
+            }
+            
             var popupHtml = renderPopup(place);
 
             marker.on('click', function(e) {
@@ -154,9 +149,6 @@ var map;
             success: function(data) {
                 processData(data);
                 createUI();
-            },
-            complete: function(jqXHR, textStatus) {
-                //
             }
         });
 

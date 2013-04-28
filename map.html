@@ -20,14 +20,16 @@
 
 <script type="text/template" id="mapPopup">
     <div id="popupContent">
+        {{#imageUrl}}
         <div class="popup-img-container">
-            <img src="{{imgUrl}}" />
+            {{{.}}}
         </div>
+        {{/imageUrl}}
 
         <div class="popup-text-container">
             <div class="close-button"><a href="#" id="popupClose">x</a></div>
             <h3 class="widget-title">{{name}}</h3>
-            <p>{{{excerpt}}}</p>
+            <p>{{excerpt}}</p>
         </div>
     </div>
 </script>
