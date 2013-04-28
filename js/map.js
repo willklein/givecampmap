@@ -174,14 +174,26 @@
 			var $el = $(this),
 				id = $el.data('id');
 
-			if ($el.hasClass('disabled')) {
-				// toggle map markers on
+//			if ($el.hasClass('disabled')) {
+//				// toggle map markers on
+//				map.addLayer(mapLayers[id]);
+//			} else {
+//				// toggle map markers off
+//				map.removeLayer(mapLayers[id]);
+//			}
+//			$el.toggleClass('disabled');
+            
+            if (!map.hasLayer(mapLayers[id])) {
 				map.addLayer(mapLayers[id]);
-			} else {
-				// toggle map markers off
+            }
+            
+            
+            $el.siblings('label').each(function() {
+                var $el = $(this),
+                    id = $el.data('id');
+
 				map.removeLayer(mapLayers[id]);
-			}
-			$el.toggleClass('disabled');
+            });
 		});
 	}
 
