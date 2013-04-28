@@ -1,32 +1,32 @@
 body {
 	font-family: sans-serif;
 }
-#container {
+#teamap-container {
     position: relative;
 	margin: 0 auto;
     width: 1020px;
 }
-#map {
+#teamap-map {
     clear: both;
     height: 400px;
     margin: 0 auto;
 }
-#legend {
+#teamap-legend {
 	margin-top: 1em;
 }
-#legend label {
+#teamap-legend label {
 	cursor: pointer;
 	margin-right: 1em;
 }
-#legend label img {
+#teamap-legend label img {
 	height: 1em;
 	margin-right: 0.2em;
 }
-#legend label.disabled {
+#teamap-legend label.disabled {
 	opacity: 0.5;
 }
 
-#popupDetails {
+#teamap-popupDetails {
     display: none;
     position: absolute;
     top: 0;
@@ -48,11 +48,11 @@ body {
     z-index: 1001;
 }
 
-#popupContent {
+#teamap-popupContent {
     padding: 5px 10px;
 }
 
-#popupContent .close-button a {
+#teamap-popupContent .close-button a {
     /*float: right;*/
     /*display: none;*/
     position: absolute;
@@ -62,53 +62,53 @@ body {
     color: #fff;
 }
 
-#popupContent .close-button a:visited {
+#teamap-popupContent .close-button a:visited {
     color: #fff;
 }
 
-.popup-img-container,
-.popup-text-container {
+.teamap-popup-img-container,
+.teamap-popup-text-container {
     height: 355px;
     float: left;
 }
 
 
-.popup-img-container {
+.teamap-popup-img-container {
     margin-top: 5px;
     overflow: hidden;
     border: 3px solid #fff;
     width: 227px;
 }
 
-.popup-text-container {
+.teamap-popup-text-container {
     padding: 10px 0 10px 10px;
     width: 237px;
 }
 
-.excerpt-container {
+.teamap-excerpt-container {
     overflow-y: auto;
     height: 290px;
     width: 227px;
     padding-right: 10px;
 }
 
-#popupContent h3 {
+#teamap-popupContent h3 {
     margin-top: 0;
     width: 227px;
 }
 
-#popupContent p {
+#teamap-popupContent p {
     margin-top: 0;
     font-size: 14px;
 }
 
-.popup-img-container img {
+.teamap-popup-img-container img {
     /*width: 200px;*/
     width: auto;
     height: 100%;
 }
 
-img.overlay-category {
+img.teamap-overlay-category {
     width: 31px;
     height: 36px;
 }

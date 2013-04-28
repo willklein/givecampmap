@@ -18,7 +18,7 @@
         )
     };
 
-    var map = new L.Map('map', options);
+    var map = new L.Map('teamap-map', options);
 
     var baseMaps = [
         'MapQuestOpen.OSM',
@@ -44,10 +44,10 @@
         };
     };
 
-    var renderPopup = renderFor('#mapPopup');
-    var renderLegendLabel = renderFor('#legendLabel');
+    var renderPopup = renderFor('#teamap-mapPopup');
+    var renderLegendLabel = renderFor('#teamap-legendLabel');
 
-    var $popupDetails = $('#popupDetails');
+    var $popupDetails = $('#teamap-popupDetails');
 
     function setHash(id) {
         global.location.hash = "#id=" + id;
@@ -73,9 +73,9 @@
 
 
 	function createUI() {
-        var $container = $('#container'),
-		    $map = $('#map'),
-			$legend = $('<div id="legend">'),
+        var $container = $('#teamap-container'),
+		    $map = $('#teamap-map'),
+			$legend = $('<div id="teamap-legend">'),
             labels = [],
 			layerGroups = {};
 
@@ -84,7 +84,7 @@
 			layerGroups[category.id] = [];
 		});
 
-        $legend.append(labels.join(''));
+        $legend.append('<ul>' + labels.join('') + '</ul>');
 		$map.after($legend);
 
 		$(places).each(function(i, place) {
@@ -126,7 +126,7 @@
 
         map.on('mousedown', hideDetails);
 
-        $container.on('click', '#popupClose', function(e) {
+        $container.on('click', '#teamap-popupClose', function(e) {
             hideDetails();
         });
 	}
@@ -186,8 +186,7 @@
 				map.addLayer(mapLayers[id]);
             }
             
-            
-            $el.siblings('label').each(function() {
+            $el.parent().siblings('li').find('label').each(function() {
                 var $el = $(this),
                     id = $el.data('id');
 
