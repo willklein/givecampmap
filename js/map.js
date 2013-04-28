@@ -1,5 +1,5 @@
 (function($, global) {
-    
+
 	var icons = {},
 		categories = [],
 		places = [],
@@ -34,7 +34,7 @@
     Handlebars.registerHelper('validUrl', function(text) {
         return $.trim(text).length;
     });
-    
+
     var renderFor = function(selector) {
         var templateSrc = $(selector).text();
         var template = Handlebars.compile(templateSrc);
@@ -70,7 +70,7 @@
 			places.push(place);
 		});
 	}
-    
+
 
 	function createUI() {
         var $container = $('#container'),
@@ -88,46 +88,44 @@
 		$map.after($legend);
 
 		$(places).each(function(i, place) {
-            var marker = L.marker([
-                parseFloat(place.lat),
-                parseFloat(place.lng)
-            ], {
-                icon: icons[place.categories && place.categories[0]],
-                title: place.name
-            });
-            
-            if (!place.imageUrl.length) {
-                delete place.imageUrl;
-            }
-            
-            var popupHtml = renderPopup(place);
+            $(place.categories).each(function(i, category) {
 
-            marker.on('click', function(e) {
-                markerClick.call(this, e);
-                showDetails(popupHtml);
-                setHash(place.id);
-            });
+                var marker = L.marker([
+                    parseFloat(place.lat),
+                    parseFloat(place.lng)
+                ], {
+                    icon: icons[category],
+                    title: place.name
+                });
 
-            //set the hashMarker for the current location hash
-            if (hash && place && place.id === hash.replace("#id=", "")) {
-                hashMarker = marker;
-            }
-            
-            // Solve the multi-category problem: try doing adding markers onto multiple layers?
-//            $.each(place.categories, function(i) {
-//                layerGroups[place.categories[i]].push(marker);
-//            });
-            
-			layerGroups[place.categories[0]].push(marker);
+                if (place.imageUrl && !place.imageUrl.length) {
+                    delete place.imageUrl;
+                }
+
+                var popupHtml = renderPopup(place);
+
+                marker.on('click', function(e) {
+                    markerClick.call(this, e);
+                    showDetails(popupHtml);
+                    setHash(place.id);
+                });
+
+                //set the hashMarker for the current location hash
+                if (hash && place && place.id === hash.replace("#id=", "")) {
+                    hashMarker = marker;
+                }
+
+    			layerGroups[category].push(marker);
+            });
 		});
 
 		$(categories).each(function(i, category) {
 			mapLayers[category.id] = L.layerGroup(layerGroups[category.id]);
 			map.addLayer(mapLayers[category.id]);
 		});
-        
+
         map.on('mousedown', hideDetails);
-        
+
         $container.on('click', '#popupClose', function(e) {
             hideDetails();
         });
@@ -153,13 +151,14 @@
 			lng = eventLatLng.lng;
 
 		map.panTo([lat - latExtent * 0, lng + lngExtent * 0.18]);
-        
+
         showDetails(e);
 	}
 
 	function init() {
         $.ajax({
             url: 'https://rawgithub.com/willklein/givecampmap/master/data/map.json',
+            dataType: 'json',
             success: function(data) {
                 processData(data);
                 createUI();
