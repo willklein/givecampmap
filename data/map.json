@@ -1,0 +1,768 @@
+{
+    "categories": [
+        {
+            "id": "42",
+            "title": "Bike Path",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/42.png"
+        },
+        {
+            "id": "30",
+            "title": "Docks",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/30.png"
+        },
+        {
+            "id": "31",
+            "title": "First Aid",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/31.png"
+        },
+        {
+            "id": "32",
+            "title": "Food Service",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/32.png"
+        },
+        {
+            "id": "33",
+            "title": "Footbridge/Access Ways",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/33.png"
+        },
+        {
+            "id": "41",
+            "title": "Handicap Accessible",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/41.png"
+        },
+        {
+            "id": "34",
+            "title": "Information Kiosk",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/34.png"
+        },
+        {
+            "id": "35",
+            "title": "Landings",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/35.png"
+        },
+        {
+            "id": "36",
+            "title": "Memorials &amp; Statues",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/36.png"
+        },
+        {
+            "id": "37",
+            "title": "Parking",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/37.png"
+        },
+        {
+            "id": "44",
+            "title": "Playgrounds",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/44.png"
+        },
+        {
+            "id": "38",
+            "title": "Police Precinct",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/38.png"
+        },
+        {
+            "id": "29",
+            "title": "Recreation",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/29.png"
+        },
+        {
+            "id": "39",
+            "title": "Restrooms",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/39.png"
+        },
+        {
+            "id": "43",
+            "title": "Running Trail",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/43.png"
+        },
+        {
+            "id": "40",
+            "title": "Water Fountains",
+            "icon": "http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/40.png"
+        }
+    ],
+    "places": [
+        {
+            "id": "3818",
+            "name": "Docks",
+            "excerpt": "The Esplanade's docks are a great place to relax and socialize along the Charles River. ",
+            "categories": [
+                "30"
+            ],
+            "lat": "42.35683092903643",
+            "lng": "-71.07587926734527",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3797",
+            "name": "Water Fountain",
+            "excerpt": "This water fountain is located by the Fiedler Footbridge.",
+            "categories": [
+                "40"
+            ],
+            "lat": "42.35620356272064",
+            "lng": "-71.07501162871745",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3795",
+            "name": "Water Fountain",
+            "excerpt": "This water fountain is located on the walkway along the river before Café Esplanade.",
+            "categories": [
+                "40"
+            ],
+            "lat": "42.356195294532064",
+            "lng": "-71.07443553805683",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3793",
+            "name": "Water Fountain",
+            "excerpt": "This water fountain is located next to the Hatch Shell Driveway.",
+            "categories": [
+                "40"
+            ],
+            "lat": "42.35765821615929",
+            "lng": "-71.07336032077842",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3791",
+            "name": "Water Fountain",
+            "excerpt": "This water fountain is located across from Community Boating.",
+            "categories": [
+                "40"
+            ],
+            "lat": "42.35959540271083",
+            "lng": "-71.07271658996001",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3786",
+            "name": "DCR Healthy Heart Trail",
+            "excerpt": "Trails are the heart of our parks and DCR wants them to be the heart of a healthy lifestyle. The Healthy Heart Trail on the Esplanade begins at the Lee Pool parking lot, is 1.5 miles long, and has an easy activity level designation.",
+            "categories": [
+                "43"
+            ],
+            "lat": "42.36456294708258",
+            "lng": "-71.07016779235823",
+            "linkText": "Click here for more information.",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"186\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Running-280x186.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Running\" />"
+        },
+        {
+            "id": "3784",
+            "name": "The Dr. Paul Dudley White Bike Path",
+            "excerpt": "The Dr. Paul Dudley White Bike Path is an 18 mile loop that starts at the Museum of Science and runs along both sides of the Charles River to Watertown Square.",
+            "categories": [
+                "42"
+            ],
+            "lat": "42.36657904715172",
+            "lng": "-71.06852441546766",
+            "linkText": "Click here for more information.",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3782",
+            "name": "Portable Toilets",
+            "excerpt": "There are portable toilets located in the Teddy Ebersol's Red Sox Fields next to Lee Pool.",
+            "categories": [
+                "39"
+            ],
+            "lat": "42.364332640613526",
+            "lng": "-71.07033758581497",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3779",
+            "name": "Dartmouth Street Comfort Station",
+            "excerpt": "The Dartmouth Street Comfort Station Restrooms are located inside Dartmouth Street Comfort Station at Dartmouth Street in the Back Bay section of the Esplanade. They are closed during the winter.",
+            "categories": [
+                "41",
+                "39"
+            ],
+            "lat": "42.35434969263212",
+            "lng": "-71.08009952218782",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"210\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Dartmouth-Street-Comfort-Station-280x210.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Dartmouth Street Comfort Station\" />"
+        },
+        {
+            "id": "3772",
+            "name": "Hatch Shell Restrooms",
+            "excerpt": "The Hatch Shell restrooms are located between the Mass. Ave. and Longfellow Bridges at the rear of the Hatch Shell. They are closed during the winter. ",
+            "categories": [
+                "41",
+                "39"
+            ],
+            "lat": "42.35732730111698",
+            "lng": "-71.073472274192",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3768",
+            "name": "Dock",
+            "excerpt": "The Esplanade's docks are a great place to relax and socialize along the Charles River.",
+            "categories": [
+                "30"
+            ],
+            "lat": "42.3519938425466",
+            "lng": "-71.11011824756974",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3766",
+            "name": "Dock",
+            "excerpt": "The Esplanade's docks are a great place to relax and socialize along the Charles River.",
+            "categories": [
+                "30"
+            ],
+            "lat": "42.35112235366849",
+            "lng": "-71.09826055054259",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3765",
+            "name": "Fiedler Field",
+            "excerpt": "The Fiedler Field is an open grassy area for recreation. The Arthur Fiedler Head Statue is located at one end of the field. The Esplanade Association hosts many of its summer programs here.",
+            "categories": [
+                "29"
+            ],
+            "lat": "42.35627360742832",
+            "lng": "-71.07582678627682",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3762",
+            "name": "Dock",
+            "excerpt": "The Esplanade's docks are a great place to relax and socialize along the Charles River.",
+            "categories": [
+                "30"
+            ],
+            "lat": "42.35313558273814",
+            "lng": "-71.08610431173406",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3760",
+            "name": "Boston University Sailing Pavilion",
+            "excerpt": "The Boston University Sailing Pavilion is open to the BU Community and the general public. The Sailing Boathouse is available for experienced sailors during recreational sailing hours by purchasing a Boston University Sailing Card.",
+            "categories": [
+                "29"
+            ],
+            "lat": "42.35202142138855",
+            "lng": "-71.11008093172972",
+            "linkText": "Click here for more information",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3758",
+            "name": "Otis Memorial Grove",
+            "excerpt": "Set among a grove of willow and birch trees with benches this boulder with a carved inscription reading “OTIS GROVE” commemorates the lives of William F. Otis, a state representative and realtor, and his wife. ",
+            "categories": [
+                "36"
+            ],
+            "lat": "42.35481667024981",
+            "lng": "-71.08135525112561",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3754",
+            "name": "Arthur Fiedler Head",
+            "excerpt": "The Arthur Fiedler Head is located near the Hatch Shell oval. In 1984 local artist Ralph Helmick created this gigantic head from 83 sheets of aluminum to commemorate Arthur Fiedler, the former conductor of the Boston Pops. To find out more visit Boston Art Commission’s website. ",
+            "categories": [
+                "36"
+            ],
+            "lat": "42.356542112206334",
+            "lng": "-71.07545662604411",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"210\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/head-280x210.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Arthur Fiedler Head\" />"
+        },
+        {
+            "id": "3751",
+            "name": "Oliver Wendell Holmes Memorial",
+            "excerpt": "This semi-circle memorial is dedicated to Oliver Wendell Holmes and is located at the rear of the Dartmouth Street Comfort Station. The architect who designed the memorial was Parker, Thomas and Rice who submitted plans for the memorial in 1915. Originally the memorial was located at the rear of 296 Beacon Street between Exeter and Fairfield Streets, which was once the home of Oliver Wendell Holmes. In 1949 the memorial was relocated near Dartmouth in anticipation of Storrow Drive. The memorial once featured a sundial at the center. ",
+            "categories": [
+                "36"
+            ],
+            "lat": "42.35431547072853",
+            "lng": "-71.08091156580417",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"224\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Oliver-Wendell-Holmes-Memorial-280x224.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Oliver Wendell Holmes Memorial\" />"
+        },
+        {
+            "id": "3749",
+            "name": "Storrow Memorial",
+            "excerpt": "The round granite memorial was constructed in 1936 and depicts the Charles River Basin and the boundaries and names of the cities and towns along the basin. The center of the memorial features a bronze medallion with the names of both Helen and James Storrow, whose perseverance and vision helped form the Esplanade. The memorial is the focal point of the Gloucester Street Landing, one of three formally designed landings along the Esplanade. The Storrow Memorial is located at the axis of Gloucester Street. ",
+            "categories": [
+                "36"
+            ],
+            "lat": "42.35292675969577",
+            "lng": "-71.08599547010203",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3746",
+            "name": "Lotta Crabtree Fountain",
+            "excerpt": "The six-foot granite fountain by sculptor Katherine Lane Weems (1899-1989) was constructed in 1939 in the name of entertainer and philanthropist Lotta Crabtree (1847-1924), for the benefit of thirsty dogs. Lotta Crabtree (1847-1924) was a dance hall performer who made a substantial fortune in 19th century California. She moved to Boston late in life and left $4 million in trusts for several needy causes including the Lotta Dumb Animal Fund. In 1939 the trustees carried out a provision in her will to erect a drinking fountain in Boston for “men, horses, birds and dogs” on a site near Embankment Road. The Lotta Fountain was initially located between Arlington and Berkeley Streets, and is now between between Berkeley and Clarendon Streets, along Storrow Drive. ",
+            "categories": [
+                "36"
+            ],
+            "lat": "42.35558079328913",
+            "lng": "-71.07596847948503",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"200\" height=\"300\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Lotta-Fountain-200x300.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Lotta Fountain\" />"
+        },
+        {
+            "id": "3739",
+            "name": "Eliot Memorial",
+            "excerpt": "The Eliot Memorial is a focal point of a shaded area near the Community Boating, Inc. (CBI) docks. At the center of the Eliot Memorial is the Charles Eliot Monument. The monument was designed by Arthur Shurcliff and honors landscape architect Charles Eliot, who was instrumental in early plans for the Esplanade and largely responsible for the establishment of the metropolitan park system. The monument, a four-sided granite block with a granite bench, includes an inscription to Eliot; on each side, the monument lists the metropolitan parks it faces (north, south, west, east). Learn more about The Esplanade Association’s plans to restore the Eliot Memorial area. ",
+            "categories": [
+                "36"
+            ],
+            "lat": "42.359292270659644",
+            "lng": "-71.07292998159141",
+            "linkText": "Click here for more information.",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"210\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/eliot-280x210.jpg\" class=\"attachment-medium wp-post-image\" alt=\"eliot\" />"
+        },
+        {
+            "id": "3736",
+            "name": "DCR Hatch Memorial Shell",
+            "excerpt": "The DCR Hatch Memorial Shell is an outdoor concert venue on the Charles River Esplanade between the Mass. Ave. and Longfellow Bridges near downtown Boston. The Hatch Shell is best known for hosting the Boston Pops Orchestra annually for the Boston Fourth of July celebration, but is also used for free concerts most weekends and many weeknights during the summer months. The grass pavilion in front of the stage has no permanent seating. For schedule of events visit DCR’s Hatch Shell events page. ",
+            "categories": [
+                "36"
+            ],
+            "lat": "42.357244573475334",
+            "lng": "-71.0736775221169",
+            "linkText": "Click here for more information",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"276\" height=\"183\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/hatch-shell-2.jpg\" class=\"attachment-medium wp-post-image\" alt=\"hatch shell #2\" />"
+        },
+        {
+            "id": "3733",
+            "name": "Gloucester Street Landing",
+            "excerpt": "Gloucester Street Landing is located along the river adjacent to Gloucester Street and the Storrow Memorial. The granite balustrade and steps built in 1933 as part of Arthur Shurcliff’s design. ",
+            "categories": [
+                "35"
+            ],
+            "lat": "42.35305699274611",
+            "lng": "-71.08609158401054",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"186\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Gloucester-St.-Landing-280x186.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Gloucester St. Landing\" />"
+        },
+        {
+            "id": "3722",
+            "name": "Tennis Courts",
+            "excerpt": "Located at Charlesbank Park, the tennis courts include four lighted courts.",
+            "categories": [
+                "29"
+            ],
+            "lat": "42.36621460236831",
+            "lng": "-71.06915566707289",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"210\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Tennis-Courts-280x210.jpg\" class=\"attachment-medium wp-post-image\" alt=\"\" />"
+        },
+        {
+            "id": "3704",
+            "name": "Community Boating, Inc.",
+            "excerpt": "Community Boating, Inc. (CBI) is located between the Hatch Shell and Longfellow Bridge. The season runs from April 1 - October 31. CBI provides lessons and boat usage for youth and adults, from beginners to advanced sailors. They offer a variety of boating, kayaking and windsurfing activities. Kids 10-18 can sail all summer for only $1.00 in the Junior Program.",
+            "categories": [
+                "30",
+                "29"
+            ],
+            "lat": "42.35975194811123",
+            "lng": "-71.07329968065573",
+            "linkText": "Click here for more information.",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"187\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Dock-1-Community-Boating-Dock-280x187.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Dock 1 Community Boating Dock\" />"
+        },
+        {
+            "id": "3701",
+            "name": "Dartmouth Street Landing",
+            "excerpt": "Dartmouth Street Landing is located along the river adjacent to Dartmouth Street. The granite balustrade and steps built in 1933 as part of Arthur Shurcliff’s design. ",
+            "categories": [
+                "35"
+            ],
+            "lat": "42.354772745005626",
+            "lng": "-71.07961181199175",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"174\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Dartmouth-St.-Landing-280x174.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Dartmouth St. Landing\" />"
+        },
+        {
+            "id": "3699",
+            "name": "Teddy Ebersol's Red Sox Fields",
+            "excerpt": "The Teddy Ebersol's Red Sox Fields provide youth soccer, baseball, and fields for general organized play. The TERSF project was developed in partnership with The Red Sox Foundation, Hill House, and The Esplanade Association. There is a water fountain located behind field # 2.",
+            "categories": [
+                "29",
+                "40"
+            ],
+            "lat": "42.363426397415544",
+            "lng": "-71.07226255601677",
+            "linkText": "Click here for more information.",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"186\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/TERSF-280x186.jpg\" class=\"attachment-medium wp-post-image\" alt=\"TERSF\" />"
+        },
+        {
+            "id": "3697",
+            "name": "Union Boat Club",
+            "excerpt": "Union Boat Club was founded in 1851 and is the longest continuously operating rowing club in Boston. Today Union Boat Club features a squash and fitness clubhouse located on Chestnut Street in Beacon Hill, along with the boathouse located on the Charles River Esplanade.",
+            "categories": [
+                "29"
+            ],
+            "lat": "42.35786308080111",
+            "lng": "-71.07329967950977",
+            "linkText": "Click here for more information.",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3696",
+            "name": "Commissioner's Landing",
+            "excerpt": "Commissioner’s Landing is located along the river near the Hatch Shell and next to Community Boating, Inc. The granite balustrade and steps were designed by Arthur Shurcliff in 1930′s and includes a plaque honoring past commissioners. The steps are presently in poor condition, and the DCR and The Esplanade Association are working to restore them. ",
+            "categories": [
+                "35"
+            ],
+            "lat": "42.357949596129146",
+            "lng": "-71.07348966823724",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"164\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Commissioners-Landing-1-280x164.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Commissoners Landing in need of repair\" />"
+        },
+        {
+            "id": "3691",
+            "name": "Information Kiosk",
+            "excerpt": "The Information Kiosk is located near the Hatch Shell Oval to provide users with information on the Esplanade, upcoming events, and emergency contact information. ",
+            "categories": [
+                "34"
+            ],
+            "lat": "42.35613938967137",
+            "lng": "-71.07418480832098",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3689",
+            "name": "Bay State Footbridge",
+            "excerpt": "This footbridge is located at the BU Beach and Bay State Road, near the Boston University Sailing Pavilion. Closest T Stops: Boston University Central (Green Line-B). Closest Public Parking: Pilgrim Parking. ",
+            "categories": [
+                "33"
+            ],
+            "lat": "42.351509734781054",
+            "lng": "-71.10649648810909",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"210\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Bay-State-Footbridge2-280x210.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Bay State Footbridge2\" />"
+        },
+        {
+            "id": "3687",
+            "name": "Exercise Course",
+            "excerpt": "The Exercise Course provides basic outdoor gym equipment for the benefit of park visitors. It is located by the Silber Way Footbridge between the Mass Ave. and BU Bridge.",
+            "categories": [
+                "29",
+                "40"
+            ],
+            "lat": "42.35128146240903",
+            "lng": "-71.09971049586352",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Exercise-course-2.jpg\" class=\"attachment-medium wp-post-image\" alt=\"???????????????????????????????\" />"
+        },
+        {
+            "id": "3685",
+            "name": "Silber Way Footbridge",
+            "excerpt": "This footbridge is located at Back Street and Silber Way, near the Exercise Course. Closest T Stops: Blandford St. Station (Green Line - B) or Kenmore Station. Closest Public Parking: Pilgrim Parking. ",
+            "categories": [
+                "33"
+            ],
+            "lat": "42.350918385550734",
+            "lng": "-71.10065821293506",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3683",
+            "name": "Charlesbank Spray Pool",
+            "excerpt": "The Charlesbank Spray Pool provides children and their families with a fun way to cool down in the summer. It is located next to the Charlesbank Playground.",
+            "categories": [
+                "29"
+            ],
+            "lat": "42.365110943162286",
+            "lng": "-71.06995049642978",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3682",
+            "name": "Massachusetts Ave. Bridge (Harvard Bridge) Footbridge",
+            "excerpt": "This footbridge is located at Massachusetts Avenue Bridge and Storrow Drive, near the Storrow Memorial and Stoneman Playground. Closest T Stops: Hynes Convention Center Station (Green Line - B, C, D). Closest Public Parking: Prudential Center Garage. ",
+            "categories": [
+                "33"
+            ],
+            "lat": "42.35207621715446",
+            "lng": "-71.08993049091555",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"168\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Mass-Ave-Footbridge-280x168.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Mass Ave Footbridge\" />"
+        },
+        {
+            "id": "3679",
+            "name": "State Police Barracks",
+            "excerpt": "In case of emergency, park users should call 911. The State Police Barracks is located at 250 Leverett Circle, Boston, MA 02114‎.",
+            "categories": [
+                "38"
+            ],
+            "lat": "42.366447979178496",
+            "lng": "-71.0679298978805",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3677",
+            "name": "Boston Common Garage",
+            "excerpt": "Boston Common Parking Garage provides parking near the Esplanade and is located at 0 Charles Street, Boston, MA 02116.",
+            "categories": [
+                "37"
+            ],
+            "lat": "42.356256992910005",
+            "lng": "-71.06948379173377",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3675",
+            "name": "Motor Mart Garage",
+            "excerpt": "Motor Mart Garage provides parking near the Esplanade and is located at 201 Stuart Street, Boston, MA 02116.",
+            "categories": [
+                "37"
+            ],
+            "lat": "42.35069372924651",
+            "lng": "-71.06840375567958",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3672",
+            "name": "Charge Point Charging Station",
+            "excerpt": "Charge Point Charging Station provides parking near the Esplanade and is located at 100 Clarendon Street, Boston, MA 02116.",
+            "categories": [
+                "37"
+            ],
+            "lat": "42.34806918077841",
+            "lng": "-71.07370737609858",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3671",
+            "name": "Fairfield Street Footbridge",
+            "excerpt": "This footbridge is located at Back Street and Fairfield Street, near Storrow Memorial, Stoneman Playground, and Storrow Lagoon. Closest T Stops: Copley Station (Green Line). Closets Public Parking: Prudential Center Garage. ",
+            "categories": [
+                "33"
+            ],
+            "lat": "42.35284773597088",
+            "lng": "-71.08363512616893",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"210\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Fairfield-Footbridge-6-280x210.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Fairfield Footbridge (6)\" />"
+        },
+        {
+            "id": "3667",
+            "name": "LAZ Copley Place Parking",
+            "excerpt": "LAZ Copley Place Parking is located at 2 Copley Place, Boston, MA 02116.",
+            "categories": [
+                "37"
+            ],
+            "lat": "42.3484550730916",
+            "lng": "-71.0763395189581",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3666",
+            "name": "Dartmouth Street Footbridge",
+            "excerpt": "This footbridge is located at Dartmouth Street and Back Street, near Dartmouth Landing, Dartmouth Street Comfort Station, Storrow Lagoon, and the Oliver Wendell Holmes Memorial. Closest T Stops: Copley Station (Green Line). Closest Public Parking: Garage @ 100 Clarendon Street and Copley Place Parking. ",
+            "categories": [
+                "33"
+            ],
+            "lat": "42.3544661864571",
+            "lng": "-71.07884291185587",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3663",
+            "name": "Arthur Fiedler Footbridge",
+            "excerpt": "This footbridge is located at Beacon Street and Arlington Street, near the Hatch Shell, Esplanade Playspace, Café Esplanade, the Lotta Fountain, and Fiedler Field. Closest T Stops: Arlington Street (Green Line) or Charles MGH (Red Line). Closest Public Parking: the Boston Common Garage, LAZ Storrow Drive Parking Lot, or Motor Mart Garage. ",
+            "categories": [
+                "33"
+            ],
+            "lat": "42.35592848885809",
+            "lng": "-71.07301357896108",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"275\" height=\"183\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Arthur-Fiedler-Footbridge-2.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Arthur Fiedler Footbridge 2\" />"
+        },
+        {
+            "id": "3658",
+            "name": "Prudential Center Garage",
+            "excerpt": "The Prudential Center Garage is located within the Prudential Center and offers preferred rates for Esplanade concerts.",
+            "categories": [
+                "37"
+            ],
+            "lat": "42.34860044249632",
+            "lng": "-71.08177546081538",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3656",
+            "name": "Blossom Street Footbridge",
+            "excerpt": "This footbridge is located at Charles Street and Blossom Street, near Lee Pool and the Teddy Ebersol's Red Sox Fields. Closest T Stops: Charles MGH (Red Line) or Science Park (Green Line). Closest Public Parking: the Boston Common Garage, LAZ Storrow Drive, or Motor Mart Garage. ",
+            "categories": [
+                "33"
+            ],
+            "lat": "42.36462862833943",
+            "lng": "-71.06984499282521",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"208\" height=\"156\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Blossom-St.-Footbridge.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Blossom St. Footbridge\" />"
+        },
+        {
+            "id": "3655",
+            "name": "Pilgrim Parking",
+            "excerpt": "Pilgrim Parking has an affordable parking lot conveniently located by the Lovejoy Wharf with easy access to the Esplanade.",
+            "categories": [
+                "37"
+            ],
+            "lat": "42.34682426471138",
+            "lng": "-71.07551697398708",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3650",
+            "name": "First Aid",
+            "excerpt": "In case of emergency, park users should call 911. MGH is located a short walk from the Esplanade's Charles Street Footbridge.  ",
+            "categories": [
+                "31"
+            ],
+            "lat": "42.36357701798935",
+            "lng": "-71.06799963662456",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3648",
+            "name": "LAZ Storrow Drive Parking Lot",
+            "excerpt": "LAZ Parking is located along Storrow Drive and Main St. and offers convient access to the Park via the Charles St., Blossom St., and Arthur Field Footbridges.",
+            "categories": [
+                "37"
+            ],
+            "lat": "42.362942027910705",
+            "lng": "-71.07059958970171",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3641",
+            "name": "Cafe Esplanade",
+            "excerpt": "Cafe Esplanade is a seasonal cafe open during warmer months. They serve a variety of sandwiches, snacks, and beverages. The Cafe is located next to the Hatch Memorial Shell and the Esplanade Playspace. ",
+            "categories": [
+                "32"
+            ],
+            "lat": "42.356356634100194",
+            "lng": "-71.07451785211128",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Cafe-Esplanade.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Cafe Esplanade\" />"
+        },
+        {
+            "id": "3635",
+            "name": "Charlesbank Playground",
+            "excerpt": "The Charlesbank Playground is geared towards 5-12 year olds. It is located near the Teddy Ebersol’s Red Sox Fields and the Museum of Science (Charles Street at Longfellow Bridge, Boston, MA 02108). ",
+            "categories": [
+                "44"
+            ],
+            "lat": "42.36555090053006",
+            "lng": "-71.06979492765208",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": "3632",
+            "name": "Miriam and Sidney Stoneman Playground",
+            "excerpt": "The Stoneman Playground is located between Fairfield and Massachusetts Avenue. The playground features an area for both toddlers and kids. ",
+            "categories": [
+                "44"
+            ],
+            "lat": "42.352598199165065",
+            "lng": "-71.08709741050847",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"225\" height=\"300\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2012/05/IMG_4003-225x300.jpg\" class=\"attachment-medium wp-post-image\" alt=\"IMG_4003\" />"
+        },
+        {
+            "id": "3626",
+            "name": "Esplanade Playspace",
+            "excerpt": "The Esplanade Playspace is geared towards 5-12 year olds. It is located near the Hatch Shell and the Arthur Fiedler Footbridge.",
+            "categories": [
+                "44",
+                "40"
+            ],
+            "lat": "42.35578790091333",
+            "lng": "-71.07474807319636",
+            "linkText": "",
+            "linkUrl": "",
+            "imageUrl": "<img width=\"280\" height=\"219\" src=\"http://www.esplanadeassociation.org/wp-content/uploads/2013/04/Esplanade-Playspace-280x219.jpg\" class=\"attachment-medium wp-post-image\" alt=\"Esplanade Playspace\" />"
+        }
+    ]
+}
