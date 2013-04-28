@@ -81,7 +81,6 @@ body {
 }
 
 .popup-text-container {
-    /*overflow-y: auto;*/
     padding: 10px 0 10px 10px;
     width: 237px;
 }
@@ -99,7 +98,6 @@ body {
 }
 
 #popupContent p {
-    /*padding: 0 10px;*/
     margin-top: 0;
     font-size: 14px;
 }
@@ -111,9 +109,6 @@ body {
 }
 
 img.overlay-category {
-    /*position: absolute;*/
     width: 31px;
     height: 36px;
-    /*clip: rect(0 31px 31px 0);*/
-    /*clip: rect(auto auto 29px auto);*/
 }

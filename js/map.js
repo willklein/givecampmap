@@ -1,6 +1,13 @@
-var map;
+(function($, global) {
+    
+	var icons = {},
+		categories = [],
+		places = [],
+		mapLayers = {},
+        hashMarker = null,
+        hash = null;
 
-(function() {
+    // Setup the map
     var options = {
         center: new L.LatLng(42.354770, -71.093431),
         zoom: 14,
@@ -11,7 +18,7 @@ var map;
         )
     };
 
-    map = new L.Map('map', options);
+    var map = new L.Map('map', options);
 
     var baseMaps = [
         'MapQuestOpen.OSM',
@@ -22,18 +29,7 @@ var map;
 
     var layerControl = L.control.layers.provided(baseMaps).addTo(map);
 
-//    layerControl.removeFrom(map);
-
-})();
-
-(function($, global) {
-
-	var icons = {},
-		categories = [],
-		places = [],
-		mapLayers = {},
-        hashMarker = null,
-        hash = null;
+    layerControl.removeFrom(map);
 
     Handlebars.registerHelper('validUrl', function(text) {
         return $.trim(text).length;
@@ -117,9 +113,11 @@ var map;
                 hashMarker = marker;
             }
             
+            // Solve the multi-category problem: try doing adding markers onto multiple layers?
 //            $.each(place.categories, function(i) {
 //                layerGroups[place.categories[i]].push(marker);
 //            });
+            
 			layerGroups[place.categories[0]].push(marker);
 		});
 
@@ -197,4 +195,3 @@ var map;
 	});
 
 })(jQuery, this);
-
