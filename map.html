@@ -31,12 +31,9 @@
             <h3 class="widget-title">{{name}}</h3>
             <div class="excerpt-container">
                 <p>{{excerpt}}</p>
-                
-                {{#categories}}
-                <div class="overlay-category-container">
+                <p>{{#categories}}
                     <img class="overlay-category" src="http://www.esplanadeassociation.org/wp-content/plugins/teamaplocator/img/{{.}}.png" />
-                </div>
-                {{/categories}}
+                   {{/categories}}</p>
             </div>
         </div>
     </div>

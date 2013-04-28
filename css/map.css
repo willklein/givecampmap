@@ -110,15 +110,10 @@ body {
     height: 100%;
 }
 
-.overlay-category-container {
-    display: inline-block;
-    position: relative;
-}
-
 img.overlay-category {
-    position: absolute;
+    /*position: absolute;*/
     width: 31px;
     height: 36px;
     /*clip: rect(0 31px 31px 0);*/
-    clip: rect(auto auto 29px auto);
+    /*clip: rect(auto auto 29px auto);*/
 }
